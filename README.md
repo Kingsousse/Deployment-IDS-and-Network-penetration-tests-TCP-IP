@@ -4,7 +4,7 @@ Deployment-IDS-and-Network-penetration-tests-TCP-IP
 Study and Deployment of an analysis environment network and penetration testing
 
 #### Cloud of technology used into the project
-![alt text](http://static.tenable.com/oldsite/blog/img/6a00d8345495f669e20133f445cc65970b "screen 1")
+![alt text](https://github.com/Kingsousse/Deployment-IDS-and-Network-penetration-tests-TCP-IP/blob/master/Pfa/pfa.png "screen 1")
 
 #### Goal of the project
 + Discover the field of network security
@@ -13,7 +13,7 @@ Study and Deployment of an analysis environment network and penetration testing
 
 #### Test topology
 
-![alt text](http://static.tenable.com/oldsite/blog/img/6a00d8345495f669e20133f445cc65970b "screen 1")
+![alt text](https://github.com/Kingsousse/Deployment-IDS-and-Network-penetration-tests-TCP-IP/blob/master/Pfa/topology.png "screen 1")
 
 #### Requirements
 + [Linux Back|Track]

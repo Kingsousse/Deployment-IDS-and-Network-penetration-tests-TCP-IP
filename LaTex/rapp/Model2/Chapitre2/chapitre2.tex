@@ -1,0 +1,176 @@
+\setcounter{chapter}{1}
+\chapter{Analyse du réseau}
+\graphicspath{{Chapitre2/figures/}}
+
+%==================================================================================================%
+\section{Introduction}
+
+Un << analyseur réseau >>\cite{3} (appelé également analyseur de trames ou en
+anglais \textit{sniffer}, traduisez << renifleur >>) est un dispositif
+permettant d' écouter le trafic d'un réseau, c'est-à-dire de capturer
+les informations qui y circulent. 
+
+En effet, dans un réseau non commuté, les données sont envoyées à
+toutes les machines du réseau. Toutefois, dans une utilisation normale
+les machines ignorent les paquets qui ne leur sont pas destinés. Ainsi,
+en utilisant l'interface réseau dans un mode spécifique (appelé généralement
+\textbf{mode promiscuous}) il est possible d'écouter tout le trafic
+passant par un adaptateur réseau (une carte réseau ethernet, une carte
+réseau sans fil, etc.).
+\section{Définition}
+
+
+
+
+\subsection{Utilisation du sniffer}
+
+Un sniffer est un outil permettant d'étudier le trafic
+d'un réseau. Il sert généralement aux administrateurs pour diagnostiquer
+les problèmes sur leur réseau ainsi que pour connaître le trafic qui
+y circule. Ainsi les détecteurs d'intrusion (\textbf{IDS}, pour intrusion
+detection system) sont basés sur un sniffeur pour la capture des trames,
+et utilisent une base de données de règles pour détecter des
+trames suspectes. 
+ le sniffer peut aussi servir à une personne malveillante ayant un accès physique
+au réseau pour collecter des informations. Ce risque est encore plus
+important sur les réseaux sans fils car il est difficile de confiner
+les ondes hertziennes dans un périmètre délimité, si bien que des
+personnes malveillantes peuvent écouter le trafic en étant simplement
+dans le voisinage. 
+
+
+\subsection{Technique de fonctionnement}
+
+Pour pouvoir écouter tout le trafic sur une interface réseau, celle-ci
+doit être configurée dans un mode spécifique, le << \textbf{mode promiscuous}
+>>. Ce mode permet d'écouter tous les paquets passant par l'interface,
+alors que dans le mode normal, le matériel servant d'interface réseau
+élimine les paquets n'étant pas à destination de l'hôte. 
+
+La grande majorité des protocoles Internet font transiter les informations
+en clair, c'est-à-dire de manière non chiffrée. Ainsi, lorsqu'un utilisateur
+du réseau consulte sa messagerie via le protocole \textbf{POP} ou
+\textbf{IMAP}, ou bien surfe sur internet sur des sites dont l'adresse
+ne commence pas par \textbf{HTTPS}, toutes les informations envoyées
+ou reçues peuvent être interceptées. C'est comme cela que des sniffers
+spécifiques ont été mis au point par des pirates afin de récupérer
+les mots de passe circulant dans le flux réseau. 
+
+Le packet sniffer décompose ces messages et les rassemble, ainsi les
+informations peuvent être analysées à des fins frauduleuses (détecter
+des logins, des mots de passe, des emails), analyser un problème réseau,
+superviser un trafic ou encore faire de la \textbf{rétro-ingénierie}.
+
+
+
+\section{Outils d'analyse réseau}
+
+
+\subsection{Wireshark}
+Wireshark\cite{4} (connu comme Ethreal jusqu'à une discussion de la marque en été 2006) est un analyseur libre du protocole du réseau pour Unix et Windows. Il nous permet d'examiner des données d'un réseau en direct ou d'un dossier de la capture sur disque. 
+On conserve les données de la capture interactivement, en creusant en bas dans seulement l'égal de détail du paquet qu'on a besoin.
+ 
+ Wireshark a des plusieurs traits puissants, y compris une langue du filtre de l'exposition riche et la capacité de regarder le ruisseau reconstruit d'une session \textbf{TCP}. Il supporte aussi des centaines de protocoles et types de média. 
+Mais cet Ethereal a souffert de douzaines de  trous de  sécurité exploitables de façon distante, donc il faut  être à jour et prudent de le faire tourner sur les réseaux hostiles (tel que conférences de la sécurité). 
+
+\subsection{Tcpdump}
+Tcpdump est le renifleur  classique  de l'\textbf{IP} qui était utilisé avant qu'Ethreal (Wireshark) est venu sur la scène, et une majorité continu à l'utiliser fréquemment. Il ne peut pas avoir les  cloches et les sifflements  comme Wireshark ,  mais il travail bien  et avec moins de trous de  sécurité.
+
+ Il exige aussi moins de ressources du système. Pendant qu'il ne reçoit pas souvent de nouveaux traits, il est maintenu active pour arrange des insectes et des problèmes de la transferabilité. Il y a une version  Windows séparé nommé WinDump.  
+
+
+\subsection{Ettercap }
+C'est un renifleur\cite{4} du réseau terminal-basé pour les réseaux Ethernet \textbf{LAN}. Il supporte des examinateurs active  et passive de beaucoup de protocoles (même chiffrés, comme \textbf{ssh} et \textbf{http}).
+Une injection des données dans un rapport peut être établie même  un filtrage  rapide est aussi possible, en gardant le rapport synchronisé. Beaucoup de modes reniflant ont été rendues effectif pour vous donner  une suite reniflant puissante et complète. Il a la capacité de vérifier si vous êtes dans un \textbf{LAN} switcher ou pas, et utilise  des empreintes digitales du Système d'exploitation (actif ou passif) pour nous faire savoir la géométrie du \textbf{LAN}.
+
+
+\subsection{Dsniff}
+C'est à la fois une suite d'utilitaire\cite{4} et un utilitaire lui-même d'audit réseau permettant aisément de sniffer les passwords circulants en clair, dans des protocoles non sécurisés. 
+
+Ainsi, Il détecte automatiquement les protocoles d'application, en capturant seulement les données intéressantes (Des mots clefs : pass, user,...). Elles concernent les sessions \textbf{FTP, telnet, SMTP, HTTP, POP, NNTP, IMAP, SNMP, LDAP, rlogin, RIP, OSPF, PPTP, AIM, IRC,...} 
+Chacun de ses programmes a un but précis (capture de mail, de fichier, d'url...). 
+
+\subsection{SoftPerfect Analyser}
+C'est est un outil avancé, professionnel pour analyser, en dépannant, en maintenant et dirigeant des réseaux locaux et des rapports Internet.
+ 
+ Il capture les données qui passent à travers la carte Ethernet du réseau, analyse ces données puis le représente dans une forme lisible. Il est un outil utile pour un administrateurs du réseau, spécialistes de la sécurité, promoteurs de l'application du réseau et n'importe qui  a besoin d'une image complète de la circulation qui traverse leur rapport du réseau ou segment d'un réseau de région local.
+
+
+\subsection{Kismet}
+ Kismet\cite{4} est un sniffer et un détecteur d'intrusion. Il fonctionne avec toutes les cartes supportant le monitoring (\textbf{rfmon}) et peut sniffer le trafic 802.11b, 802.11a, et 802.11g. Il est composé d'un serveur et d'un client (par défaut l'accès est restreint à l'adresse local) ce qui permet à plusieurs utilisateurs de voir un seul serveur Kismet simultanément. 
+il peut détecter automatiquement les bloques IP du réseau en reniflant TCP, UDP, ARP et paquets DHCP, circulant dans le réseau estimé.
+
+\section{Synthèse comparative}
+\subsection{Tableau comparatif des outils}
+Nous allons dans cette partie essayer de nous chercher à faire une comparaison entre ces différents outils d'analyse réseau, c'est à dire renseigner tous les critères de comparaison pour l'ensemble des produits choisis, de façon superficielle. Le but de notre étude est de trouver l'outil le mieux adaptable à notre test qu'on va le réaliser dans la partie Réalisation (chapitre 4). En effet, les résultats de comparaison nous ont mené à faire le tableau tab \ref{tabcomp}.
+\begin{table}
+\begin{center}
+
+
+
+\begin{sideways}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+\multicolumn{2}{|c|}{\textbf{\textit{Critères}}} & \textbf{\footnotesize Wireshark} & \textbf{\footnotesize Tcpdump} & \textbf{\footnotesize Cain and Abel } & \textbf{\footnotesize Ettercap} & \textbf{\footnotesize Dsniff} & \textbf{\footnotesize SoftPerfect An.} & \textbf{\footnotesize Kismet}\tabularnewline
+\hline
+\multicolumn{9}{c}{\textbf{\textit{Matériel et Système}}}\tabularnewline
+\hline 
+ & \textsl{\footnotesize Linux} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui}\tabularnewline
+\cline{2-9} 
+ & \textsl{\footnotesize BSD} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui}\tabularnewline
+\cline{2-9} 
+\textbf{\textit{\footnotesize Les plate formes }} & \textsl{\footnotesize Mac OS X} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui}\tabularnewline
+\cline{2-9} 
+\textbf{\textit{\footnotesize d'utilisation}} & \textsl{\footnotesize Solaris} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Non}\tabularnewline
+\cline{2-9} 
+ & \textsl{\footnotesize Microsoft} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui}\tabularnewline
+ & \textsl{\footnotesize Windows} &  & {\footnotesize (WinDump)} &  &  &  &  & \tabularnewline
+\hline 
+\textbf{\textit{\footnotesize Type de réseau }} & \textsl{\footnotesize Ethernet} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non}\tabularnewline
+\cline{2-9} 
+\textbf{\textit{\footnotesize analysé }} & \textsl{\footnotesize Réseaux sans fil} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui}\tabularnewline
+\hline 
+\multicolumn{9}{c}{\textbf{\textit{Interfaces et Utilisation}}}\tabularnewline
+\hline 
+\textbf{\textit{\footnotesize Interfaces}} & \textsl{\footnotesize Console} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui}\tabularnewline
+\cline{2-9} 
+\textbf{\textit{\footnotesize offert}} & \textsl{\footnotesize GUI } & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Non}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{\textbf{\textit{\footnotesize Facilité d'utilisation}}} & {\footnotesize {*}{*}{*}{*}{*}} & {\footnotesize {*}{*}{*}} & {\footnotesize {*}{*}{*}{*}} & {\footnotesize {*}{*}{*}{*}} & {\footnotesize {*}{*}} & {\footnotesize {*}{*}{*}{*}{*}} & {\footnotesize {*}{*}}\tabularnewline
+\hline 
+\multicolumn{9}{c}{\textbf{\textit{Outils}}}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{\textbf{\textit{\footnotesize Type d'outil}}} & {\footnotesize Open } & {\footnotesize Open } & {\footnotesize Open } & {\footnotesize Open } & {\footnotesize Open } & {\footnotesize Payant} & {\footnotesize Open }\tabularnewline
+\multicolumn{2}{|c|}{} & {\footnotesize source} & {\footnotesize source} & {\footnotesize source} & {\footnotesize source} & {\footnotesize source} &  & {\footnotesize source}\tabularnewline
+\hline 
+\multicolumn{2}{|c|}{\textbf{\textit{\footnotesize Capture du trafic}}} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Oui} & {\footnotesize Non} & {\footnotesize Non} & {\footnotesize Oui} & {\footnotesize Oui}\tabularnewline
+\hline
+\end{tabular}
+\end{sideways}
+\caption{Tableau comparatif de quelques outils d'analyse réseau}
+\label{tabcomp}
+\end{center}
+\end{table}
+
+\subsection{Constatation }
+Il est assez difficile de comparer ces produits à ce niveau. Généralement,
+nous attribuons aux produits des sociétés commerciales une meilleure
+pérennité que les logiciels Open source. Wireshark est un parfait
+contre exemple. Wireshark propose la meilleur ergonomie au niveau
+de son interface, de plus il fournit : 
+\begin{maliste}
+\item adaptation à différentes technologie de réseaux locaux (\textbf{Ethernet},
+\textbf{Token Ring}, \textbf{FDDI}, \textbf{802.11}, ...) ;
+\item filtrage des paquets en capture et impression (avec personnalisation
+de l\textquoteright{}utilisation de la couleur) ;
+\item suivi de session TCP;
+\item création de statistiques et de graphes (nombre de paquets, nombre
+de requ êtes, ...). 
+\end{maliste}
+
+Finalement, il est évolutif, ouvert et gratuit. 
+
+\section{conclusion}
+Il existe plusieurs analyseurs du réseau et qui se diffèrent l'un de l'autre mais ça reste un dispositif
+permettant d'écouter le trafic d'un réseau et de capturer les informations qui y circulent.
+L'intérêt de ces outils pour un administrateur de réseau est manifeste. Ils sont par contre très dangereux lorsque des personnes mal intentionnées les utilisent. Compte tenu de leur capacité à interpréter en clair des protocoles aussi répandu que \textbf{HTTP}, \textbf{POP}, \textbf{IMAP}, \textbf{LDAP}, ... il est évident que l'usage des versions sécurisées \textbf{HTTPS}, \textbf{POPS}, \textbf{IMAPS}, \textbf{LDAPS}, ... est fondamental.

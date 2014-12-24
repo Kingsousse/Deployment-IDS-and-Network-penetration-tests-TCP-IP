@@ -1,0 +1,796 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Définition
+\end_layout
+
+\begin_layout Subsection
+Qu’est ce qu’un test d’intrusion ?
+\end_layout
+
+\begin_layout Standard
+Les tests d’intrusion constituent une tentative autorisée de simuler les
+ activités d’un pirate qui veut s’approprier des ressources qui ne sont
+ pas les siennes, ou nuire au bon fonctionnement d’un système d’informations,
+ par exemple en le rendant indisponible.
+\end_layout
+
+\begin_layout Standard
+Ces tests permettent d’avoir une image claire de la sécurité globale d’une
+ entreprise ou d’un accès Internet chez un particulier.
+ Ils correspondent à des attaques simulées d’un réseau.
+ Ils permettent de tester la robustesse de la sécurité, d’apprécier l’efficacité
+ des mécanismes mis en oeuvre.
+ Il est ainsi possible de savoir si les mécanismes mis en place permettent
+ de stopper ou non un attaquant malintentionné.
+\end_layout
+
+\begin_layout Standard
+Les tests d’intrusion ne peuvent pas se réduire à la simple utilisation
+ d’un logiciel de détection automatique de vulnérabilités par balayage.
+ Ils sont bien plus, en particulier ils nécessitent l’intervention d’une
+ équipe de professionnels compétents qui eux vont identifier et qualifier
+ les failles de manière plus réfléchie et auront à l’esprit les conséquences
+ des tests qu’ils effectueront.
+ Néanmoins, les scanners de vulnérabilité présentent un certain intérêt
+ dans leur caractère automatique mais ils ne suffisent pas à eux seuls à
+ obtenir une bonne détermination des failles de vulnérabilité que présente
+ un réseau.
+\end_layout
+
+\begin_layout Subsection
+Stratégies de tests
+\end_layout
+
+\begin_layout Standard
+Il existe plusieurs stratégies de tests :
+\end_layout
+
+\begin_layout Itemize
+Les tests externes qui correspondent à un examen des services disponibles
+ via Internet.
+\end_layout
+
+\begin_layout Itemize
+Les tests internes qui exploitent les failles de vulnérabilités qui pourraient
+ être disponibles à un attaquant en provenance d’Internet ayant réussi à
+ s’introduire dans le réseau ou à un employé malveillant.
+\end_layout
+
+\begin_layout Standard
+Les méthodes et les techniques utilisés dans les tests internes ou externes
+ sont identiques.
+ La seule différence notable est l’étendue des connaissances relatives au
+ réseau, en possession des attaquants.
+\end_layout
+
+\begin_layout Standard
+Pour simuler ce degré de connaissance du système, les tests d’intrusion
+ peuvent se faire de plusieurs façons :
+\end_layout
+
+\begin_layout Itemize
+Test en aveugle : les équipes en charge du test ont un accès limité aux
+ renseignements relatifs à la configuration du système d’information
+\end_layout
+
+\begin_layout Itemize
+Test en double aveugle : seule la personne qui est à l’initiative du test
+ est au courant, la personne en charge de la sécurité ne l’est pas.
+\end_layout
+
+\begin_layout Itemize
+Test ciblé : l’équipe de sécurité est au courant et a des connaissances
+ sur le réseau et sur la cible visée.
+\end_layout
+
+\begin_layout Subsection
+Types de tests
+\end_layout
+
+\begin_layout Standard
+Il existe différents types de tests parmi lesquels nous pouvons noter ceux
+ relatifs :
+\end_layout
+
+\begin_layout Paragraph
+à la sécurité des applications Web
+\end_layout
+
+\begin_layout Standard
+Les points à évaluer alors sont ceux relatives à la confidentialité et l’intégri
+té des communications sur le réseau, à l’authentification des utilisateurs,
+ à l’intégrité des sessions entre l’internaute et les applications, à la
+ gestion des informations stockées sur les postes clients telles que les
+ 
+\series bold
+cookies
+\series default
+…
+\end_layout
+
+\begin_layout Paragraph
+au déni de service (
+\series bold
+DoS
+\series default
+)
+\end_layout
+
+\begin_layout Standard
+Les dénis de service sont des attaques dont le but est de rendre indisponibles
+ des services ou de faire tomber un serveur proposant des services.
+ Ceci peut poser des problèmes importants lorsque la disponibilité continue
+ des services est impérative.
+\end_layout
+
+\begin_layout Paragraph
+au scannage de numéros de téléphone (
+\series bold
+War dialing
+\series default
+)
+\end_layout
+
+\begin_layout Standard
+Cette technique consiste à identifier des connexions à l’Internet au sein
+ d’une entreprise par appel systématique d’une série de numéros de téléphone.
+ Une fois les modems ou autres dispositifs d’accès détectés, les techniques
+ d’analyse et d’exploitation sont employées pour déterminer dans quelle
+ mesure il est possible d’infiltrer le réseau de l’entreprise.
+\end_layout
+
+\begin_layout Paragraph
+au réseau sans fil
+\end_layout
+
+\begin_layout Standard
+Ce type de test a pour but de cerner les lacunes ou les faiblesses en matière
+ de sécurité dans la conception, la mise en oeuvre ou l’exploitation des
+ réseaux sans fil.
+ Par exemple, nous pouvons citer le war driving qui consiste à rechercher
+ des réseaux sans fil non sécurisés à l’aide d’une voiture, d’un ordinateur
+ portable, d’une carte 
+\series bold
+Wifi 
+\series default
+et d’une antenne.
+\end_layout
+
+\begin_layout Paragraph
+à l’
+\series bold
+ingénierie sociale
+\end_layout
+
+\begin_layout Standard
+Ces techniques exploitent les interactions sociales, qui impliquent les
+ utilisateurs d’un système d’information cible, afin de recueillir de l’informat
+ion et de s’infiltrer dans le réseau de l’organisation.
+ Tous les moyens sont bons, cela peut aller jusqu'à l’usurpation d’identité.
+\end_layout
+
+\begin_layout Subsection
+Leurs limites
+\end_layout
+
+\begin_layout Standard
+Les tests d’intrusion peuvent échouer, ce qui ne signifie pas que le système
+ ne présente pas de faille de vulnérabilité.
+\end_layout
+
+\begin_layout Standard
+Il est difficile voire impossible de tester toutes les failles de vulnérabilité
+ présentes dans un réseau.
+ Les scanners de vulnérabilité par exemple ne simulent pas toutes les nouvelles
+ failles.
+ Certaines des vulnérabilités ne sont pas prises en compte par ces derniers,
+ soit parce que la vulnérabilité est totalement inconnue, soit parce que
+ la mise à jour du logiciel prenant en compte cette vulnérabilité n’est
+ pas encore disponible.
+\end_layout
+
+\begin_layout Standard
+De plus, il est nécessaire de répéter de façon régulière ces tests.
+ Tout ajout de matériel, l’apparition de nouveaux outils de piratage ou
+ de nouvelles technologies remettent en cause les résultats des tests d’intrusio
+n.
+\end_layout
+
+\begin_layout Subsection
+La démarche utilisée dans les tests d’intrusion
+\end_layout
+
+\begin_layout Standard
+Nous nous intéressons ici à la description de la démarche employée dans
+ les tests d’intrusion :
+\end_layout
+
+\begin_layout Subsubsection*
+A.
+ La phase préparatoire
+\end_layout
+
+\begin_layout Enumerate
+collection d’informations publiques (DNS, WhoIs, …)
+\end_layout
+
+\begin_layout Enumerate
+cartographie réseau de la cible ( ping, traceroute, nmap )
+\end_layout
+
+\begin_layout Enumerate
+identification de vulnérabilité (Nessus)
+\end_layout
+
+\begin_layout Enumerate
+consolidation de données obtenues
+\end_layout
+
+\begin_layout Subsubsection*
+B.
+ La phase de réalisation
+\end_layout
+
+\begin_layout Enumerate
+conception des scénarii d’attaques à évaluer
+\end_layout
+
+\begin_layout Enumerate
+exécution des scénarii
+\end_layout
+
+\begin_layout Enumerate
+consolidation des données obtenues
+\end_layout
+
+\begin_layout Standard
+Dans le cas des 
+\series bold
+hackers
+\series default
+, l’intrusion s’arrête ici.
+ Ils nettoient généralement les traces laissées par leur passage.
+\end_layout
+
+\begin_layout Standard
+Dans le cas d’un audit de sécurité, il faut alors fermer les brèches ouvertes,
+ puis passer à l’étape suivante.
+\end_layout
+
+\begin_layout Subsubsection*
+C.
+ La phase de restitution
+\end_layout
+
+\begin_layout Enumerate
+synthèse des données obtenues lors des phases préparatoires puis de réalisation
+\end_layout
+
+\begin_layout Enumerate
+définition d’un plan d’actions correctrices
+\end_layout
+
+\begin_layout Enumerate
+présentation des résultats au commanditaire du test
+\end_layout
+
+\begin_layout Standard
+Nous illustrerons dans la suite cette démarche en indiquant les différents
+ outils utilisés agrémentés d’exemples.
+\end_layout
+
+\begin_layout Section
+L’audit de vulnérabilité
+\end_layout
+
+\begin_layout Standard
+Nous parlons ici de l’audit en tant qu’étape de la phase préparatoire de
+ la démarche utilisée dans les tests d’intrusion.
+ Elle consiste à récupérer des informations relatives aux réseaux et aux
+ systèmes présents sur ces derniers, dans le but d’identifier les failles
+ de vulnérabilité.
+ Les failles de vulnérabilité résultent en général de limites inhérentes
+ à la conception des technologies ou découlent de mauvaises configurations
+ ou utilisations.
+ Les tests d’intrusions donnent des indications sur la facilité ou à l’inverse
+ la difficulté d’accéder à l’information et au système d’informations en
+ exploitant les vulnérabilités de sécurité.
+ Les scanners de vulnérabilité correspondent à une façon automatisée de
+ mise en évidence de ces failles.
+ Ils indiquent la façon dont il est possible d’exploiter ces vulnérabilités
+ et les méthodes permettant de résoudre les problèmes.
+ Ils couvrent, en général, un large éventail de vulnérabilités connues.
+ Tandis que les tests d’intrusion ciblent certaines vulnérabilités.
+\end_layout
+
+\begin_layout Section
+Outils liés aux tests d’intrusion
+\end_layout
+
+\begin_layout Standard
+Nous allons reprendre dans cette partie les différentes étapes de la démarche
+ utilisée dans les tests d’intrusion que nous avons présentées précédemment,
+ dans lesquelles sont utilisés des outils spécifiques.
+ Nous donnerons également des exemples afin de mieux illustrer la démarche.
+\end_layout
+
+\begin_layout Standard
+%%%%%
+\end_layout
+
+\begin_layout Subsection
+Divers outils
+\end_layout
+
+\begin_layout Subsubsection
+Etape de collecte d’informations publiques (A.1.)
+\end_layout
+
+\begin_layout Standard
+La commande 
+\series bold
+Whois
+\series default
+ permet d’obtenir des informations publiques correspondant au réseau cible
+ : nom du serveur 
+\series bold
+DNS
+\series default
+, nom du responsable, numéro de téléphone, adresse e-mail, description du
+ réseau etc.
+\end_layout
+
+\begin_layout Subsubsection
+Etape de cartographie du réseau cible (A.2.)
+\end_layout
+
+\begin_layout Standard
+Les outils utilisés dans cette étape permettent de récolter des informations
+ relatives à la topologie du réseau afin de déterminer sa structuration.
+ Parmi ces outils, nous pouvons trouver :
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Nmap
+\series default
+\shape default
+ qui est un scanner de réseau.
+ Il permet de savoir quels sont les ports ouverts, fermés ou filtrés , ainsi
+ que le système d’exploitation autorisé et sa version.
+ Il permet par exemple de scanner un ensemble d’
+\series bold
+adresses IP
+\series default
+ en précisant la méthode de scan utilisée, les types de ports tels que les
+ ports 
+\series bold
+UDP
+\series default
+, en tentant d’identifier la machine cible et en sauvegardant le résultat
+ dans un fichier.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Siphon
+\series default
+\shape default
+ permet de découvrir la topologie de la portion de réseau sur laquelle se
+ trouve la machine où nous le lançons.
+ Il indique les systèmes d’exploitation présents sur les machines , les
+ ports ouverts , les machines qui ont le droit de se connecter au réseau.
+ Il est ainsi possible de savoir pour quelle machine nous devons nous faire
+ passer, afin de contourner les Firewalls.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Dsniff
+\series default
+\shape default
+ permet de visualiser les paquets présents sur le réseau et ainsi de récupérer
+ des clefs en sniffant (
+\series bold
+sniffer
+\series default
+).
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Finger
+\series default
+\shape default
+ permet d’obtenir des comptes valides.
+ En général, le 
+\series bold
+démon
+\series default
+ correspondant est désactivé.
+\end_layout
+
+\begin_layout Subsubsection
+Etape d’identification des vulnérabilités (A.3.)
+\end_layout
+
+\begin_layout Standard
+L’objectif est d’identifier les failles potentielles présentes sur le réseau
+ en utilisant des scanners de vulnérabilité tels que 
+\series bold
+Nessus
+\series default
+.
+ L’utilisation de ces logiciels n’est pas très discrète.
+ En effet, étant donné que ces logiciels testent des failles bien connues
+ des 
+\series bold
+NIDS
+\series default
+, ils sont facilement repérables.
+ Les 
+\series bold
+NIDS
+\series default
+ sont des systèmes de détection d'intrusion basés au niveau d’un réseau.
+ 
+\end_layout
+
+\begin_layout Standard
+Une fois un certain nombre de vulnérabilités identifiées, il est alors nécessair
+e d’éliminer les failles non fondées.
+ Pour cela nous utilisons des petits programmes appelés 
+\series bold
+Exploits
+\series default
+.
+ Leur objectif est d’exploiter les vulnérabilités auxquelles ils correspondent.
+ Ils sont programmés dans divers langages.
+ Il n’y a pas d’automatisation qui permet l’utilisation ensembliste des
+ 
+\series bold
+Exploits
+\series default
+ mais il existe néanmoins des bibliothèques dédiées.
+\end_layout
+
+\begin_layout Subsubsection
+Etape d’exécution des scénarii (B.2.)
+\end_layout
+
+\begin_layout Standard
+Nous pouvons distinguer deux ensembles de produits utilisés dans cette étape,
+ ceux qui permettent de s’introduire sur un ordinateur ou un serveur et
+ ceux qui permettent de se procurer des privilèges auxquels nous n’avons
+ normalement pas accès.
+\end_layout
+
+\begin_layout Paragraph
+a) 
+\shape italic
+\emph on
+\bar under
+Outils d’intrusion
+\shape default
+\emph default
+\bar default
+ 
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Finger,Rusers
+\series default
+\shape default
+ permettent de trouver des comptes valides.
+ Ce sont des commandes système de base d’
+\series bold
+Unix
+\series default
+.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Exploits
+\series default
+\shape default
+ permettent d’exploiter des vulnérabilités afin d’avoir accès à un poste.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Netcat
+\series default
+\shape default
+ est un utilitaire multifonctions pour le réseau.
+ Il fonctionne en client ou serveur en utilisant le protocole 
+\series bold
+TCP
+\series default
+.
+ Il permet de simuler des services et d’écouter l’activité correspondant
+ à un port donné.
+\end_layout
+
+\begin_layout Standard
+Certains outils permettent la récupération de l’information qui circule
+ sur le réseau.
+ Nous pouvons citer par exemple : 
+\series bold
+Sniffer, TCPdump, Siphon, Ethereal
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Ces outils permettent donc de s’introduire sur des serveurs.
+ Par exemple, dans le cas où un 
+\series bold
+routeur
+\series default
+ supporte la 
+\series bold
+source routing
+\series default
+, il est possible de recourir à 
+\series bold
+IP spoofing
+\series default
+.
+ L’
+\series bold
+IP spoofing
+\series default
+ est une technique qui permet à une machine d’être authentifiée auprès d’une
+ autre au moyen de paquets semblant émaner d’une adresse source habilitée.
+ Cette technique peut être faite en deux étapes.
+ Nous plaçons un alias sur l’interface réseau d’un poste, ensuite, nous
+ utilisons une propriété du protocole IP qui est la possibilité de choisir
+ la route à emprunter.
+ 
+\series bold
+Netcat
+\series default
+ permet alors d’établir une connexion 
+\series bold
+Telnet
+\series default
+ en précisant la route à emprunter.
+\end_layout
+
+\begin_layout Paragraph
+b) 
+\shape italic
+\emph on
+\bar under
+Outils permettant l’élévation de privilèges
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+John-the-ripper
+\series default
+\shape default
+ qui permet d’obtenir des mots de passe en clair à partir de mots de passe
+ cryptés.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Exploits
+\series default
+\shape default
+ qui permettent par exemple de devenir administrateur.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+
+\series bold
+\shape slanted
+Dsniff
+\series default
+\shape default
+ qui ne capture que les mots de passe.
+ Il supporte divers protocoles (
+\series bold
+SNMP, Netbios
+\series default
+) et peut être utilisé avec des services tel que 
+\series bold
+Telnet
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Outils d’audit
+\end_layout
+
+\begin_layout Standard
+Il existe de nombreux logiciels qui permettent d’automatiser la découverte
+ de vulnérabilités, nous les appelons des scanners.
+ Ils permettent d’évaluer les vulnérabilités présentes sur les réseaux.
+ Ils se déclinent sous plusieurs formes et donnent des résultats avec des
+ précisions variables.
+\end_layout
+
+\begin_layout Subsubsection
+Internet Scanner
+\end_layout
+
+\begin_layout Standard
+Parmi ces logiciels, nous pouvons citer 
+\series bold
+Internet Scanner
+\series default
+ de la société 
+\series bold
+ISS
+\series default
+.
+ Il peut s’intégrer au produit 
+\series bold
+ISS
+\series default
+ Décisions pour être utilisé avec d’autres produits de sécurité tels que
+ les systèmes de détection d’intrusions et les 
+\series bold
+firewall
+\series default
+ (pare-feu).
+\end_layout
+
+\begin_layout Subsubsection
+SATAN, SAINT, SARA
+\end_layout
+
+\begin_layout Standard
+Vers le début des années 90, est apparu 
+\series bold
+SATAN 
+\series default
+qui a remporté un énorme succès dans le domaine.
+ Il avait la particularité d’être 
+\series bold
+open source
+\series default
+.
+ Il n’est plus mis à jour depuis plusieurs années.
+ Mais, il existe une myriade d’outils similaires tel que l’outil 
+\series bold
+open source SARA 
+\series default
+qui est la troisième génération d’outil d’analyse basé sur 
+\series bold
+SATAN
+\series default
+, ou la solution commerciale 
+\series bold
+SAINT
+\series default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Retina
+\end_layout
+
+\begin_layout Standard
+Nous pouvons également citer le logiciel 
+\series bold
+Retina
+\series default
+ de la société eEye, qui est rapidement devenu populaire.
+ Il analyse le trafic sur chaque port afin de déterminer le service utilisé.
+ Il existe une fonction nommée 
+\series bold
+CHAM
+\series default
+ permettant de découvrir de nouvelles failles de vulnérabilité.
+ Cette méthode repose sur un moteur d’intelligence artificiel.
+ 
+\series bold
+Retina
+\series default
+ est une solution commerciale.
+\end_layout
+
+\begin_layout Subsubsection
+Nessus, NeWT
+\end_layout
+
+\begin_layout Standard
+Enfin, il existe une autre offre dont nous allons parler de façon plus approfond
+ie dans ce document, l’outil Nessus, et sa version Windows appelée 
+\series bold
+NeWT
+\series default
+.
+ 
+\series bold
+Nessus
+\series default
+ est un outil 
+\series bold
+open source
+\series default
+.
+ Un français, renaud Deraison, est l’auteur et l’animateur de se projet.
+ La version Windows est disponible sur le site de la société Tenable Network
+ Security en version d’évaluation.
+ Nessus semble être l’un des outils les plus populaires du moment.
+\end_layout
+
+\end_body
+\end_document

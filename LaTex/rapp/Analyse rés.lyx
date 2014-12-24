@@ -1,0 +1,199 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Définition
+\end_layout
+
+\begin_layout Subsubsection
+Qu’est ce qu’un Analyseur réseau ?
+\end_layout
+
+\begin_layout Standard
+Un « analyseur réseau » (appelé également analyseur de trames ou en anglais
+ 
+\shape italic
+sniffer
+\shape default
+, traduisez « renifleur ») est un dispositif permettant d'« écouter » le
+ trafic d'un réseau, c'est-à-dire de capturer les informations qui y circulent.
+ .
+\end_layout
+
+\begin_layout Standard
+En effet, dans un réseau non commuté, les données sont envoyées à toutes
+ les machines du réseau.
+ Toutefois, dans une utilisation normale les machines ignorent les paquets
+ qui ne leur sont pas destinés.
+ Ainsi, en utilisant l'interface réseau dans un mode spécifique (appelé
+ généralement 
+\series bold
+mode promiscuous
+\series default
+) il est possible d'écouter tout le trafic passant par un adaptateur réseau
+ (une carte réseau ethernet, une carte réseau sans fil, etc.).
+\end_layout
+
+\begin_layout Subsubsection
+Utilisation du sniffer
+\end_layout
+
+\begin_layout Standard
+Un sniffer est un formidable outil permettant d'étudier le trafic d'un réseau.
+ Il sert généralement aux administrateurs pour diagnostiquer les problèmes
+ sur leur réseau ainsi que pour connaître le trafic qui y circule.
+ Ainsi les détecteurs d'intrusion (
+\series bold
+IDS
+\series default
+, pour intrusion detection system) sont basés sur un sniffeur pour la capture
+ des trames, et utilisent une base de données de règles (rules) pour détecter
+ des trames suspectes.
+ 
+\end_layout
+
+\begin_layout Standard
+Malheureusement, comme tous les outils d'administration, le sniffer peut
+ également servir à une personne malveillante ayant un accès physique au
+ réseau pour collecter des informations.
+ Ce risque est encore plus important sur les réseaux sans fils car il est
+ difficile de confiner les ondes hertziennes dans un périmètre délimité,
+ si bien que des personnes malveillantes peuvent écouter le trafic en étant
+ simplement dans le voisinage.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Technique de fonctionnement
+\end_layout
+
+\begin_layout Standard
+Pour pouvoir écouter tout le trafic sur une interface réseau, celle-ci doit
+ être configurée dans un mode spécifique, le « 
+\series bold
+mode promiscuous
+\series default
+ ».
+ Ce mode permet d'écouter tous les paquets passant par l'interface, alors
+ que dans le mode normal, le matériel servant d'interface réseau élimine
+ les paquets n'étant pas à destination de l'hôte.
+ 
+\end_layout
+
+\begin_layout Standard
+La grande majorité des protocoles Internet font transiter les informations
+ en clair, c'est-à-dire de manière non chiffrée.
+ Ainsi, lorsqu'un utilisateur du réseau consulte sa messagerie via le protocole
+ 
+\series bold
+POP
+\series default
+ ou 
+\series bold
+IMAP
+\series default
+, ou bien surfe sur internet sur des sites dont l'adresse ne commence pas
+ par 
+\series bold
+HTTPS
+\series default
+, toutes les informations envoyées ou reçues peuvent être interceptées.
+ C'est comme cela que des sniffers spécifiques ont été mis au point par
+ des pirates afin de récupérer les mots de passe circulant dans le flux
+ réseau.
+ 
+\end_layout
+
+\begin_layout Standard
+Le packet sniffer décompose ces messages et les rassemble, ainsi les information
+s peuvent être analysées à des fins frauduleuses (détecter des logins, des
+ mots de passe, des emails), analyser un problème réseau, superviser un
+ trafic ou encore faire de la 
+\series bold
+rétro-ingénierie
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Outils d'analyse réseau
+\end_layout
+
+\begin_layout Subsection
+Wireshark
+\end_layout
+
+\begin_layout Subsection
+Tcpdump
+\end_layout
+
+\begin_layout Subsection
+Cain and Abel 
+\end_layout
+
+\begin_layout Subsection
+Ettercap 
+\end_layout
+
+\begin_layout Subsection
+Dsniff
+\end_layout
+
+\begin_layout Subsection
+Ntop
+\end_layout
+
+\begin_layout Subsection
+Kismet
+\end_layout
+
+\begin_layout Section
+Table comparatif des outils
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

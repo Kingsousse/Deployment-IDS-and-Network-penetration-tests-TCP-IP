@@ -1,0 +1,499 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section
+La sécurité informatique
+\end_layout
+
+\begin_layout Subsection
+Domaines de la sécurité informtique
+\end_layout
+
+\begin_layout Standard
+La sécurité informatique c'est l'ensemble des moyens mis en œuvre pour minimiser
+ la vulnérabilité d'un système contre des menaces accidentelles ou in accidentel
+les.
+ Elle consiste avant tout à connaitre et prévenir.
+ Connaitre les dangers auxquels il convient de parer, et connaitre les moyens
+ de se prémunir contre eux.
+ La sécurité exige de se montrer systématique, mais elle implique aussi
+ un effort de coordination, de technologie, d'information, de discussion,
+ de comparaison et de contrôle.
+ 
+\end_layout
+
+\begin_layout Subsection
+Objectifs généraux de la sécurité informatique
+\end_layout
+
+\begin_layout Standard
+La sécurité informatique, d'une manière générale, consiste à assurer que
+ les ressources matérielles ou logicielles d'une organisation sont uniquement
+ utilisées dans le cadre prévu.
+ 
+\end_layout
+
+\begin_layout Standard
+La sécurité informatique vise généralement cinq principaux objectifs :
+\end_layout
+
+\begin_layout Itemize
+L'intégrité, c'est-à-dire garantir que les données sont bien celles que
+ l'on croit être ; 
+\end_layout
+
+\begin_layout Itemize
+La confidentialité, consistant à assurer que seules les personnes autorisées
+ aient accès aux ressources échangées ; 
+\end_layout
+
+\begin_layout Itemize
+La disponibilité, permettant de maintenir le bon fonctionnement du système
+ d'information ; 
+\end_layout
+
+\begin_layout Itemize
+La non répudiation, permettant de garantir qu'une transaction ne peut être
+ niée ; 
+\end_layout
+
+\begin_layout Itemize
+L'authentification, consistant à assurer que seules les personnes autorisées
+ aient accès aux ressources.
+\end_layout
+
+\begin_layout Subsubsection
+L'intégrité
+\end_layout
+
+\begin_layout Standard
+Vérifier l'intégrité des données consiste à déterminer si les données n'ont
+ pas été altérées durant la communication (de manière fortuite ou intentionnelle
+).
+ 
+\end_layout
+
+\begin_layout Subsubsection
+La confidentialité
+\end_layout
+
+\begin_layout Standard
+La confidentialité consiste à rendre l'information inintelligible à d'autres
+ personnes que les seuls acteurs de la transaction.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+La disponibilité
+\end_layout
+
+\begin_layout Standard
+L'objectif de la disponibilité est de garantir l'accès à un service ou à
+ des ressources.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+La non-répudiation
+\end_layout
+
+\begin_layout Standard
+La non-répudiation de l'information est la garantie qu'aucun des correspondants
+ ne pourra nier la transaction.
+\end_layout
+
+\begin_layout Subsubsection
+L'authentification
+\end_layout
+
+\begin_layout Standard
+L'authentification consiste à assurer l'identité d'un utilisateur, c'est-à-dire
+ de garantir à chacun des correspondants que son partenaire est bien celui
+ qu'il croit être.
+ Un contrôle d'accès peut permettre (par exemple par le moyen d'un mot de
+ passe qui devra être crypté) l'accès à des ressources uniquement aux personnes
+ autorisées.
+ 
+\end_layout
+
+\begin_layout Section
+Vulnérabilité
+\end_layout
+
+\begin_layout Subsection
+Définition 
+\end_layout
+
+\begin_layout Subsection
+Causes
+\end_layout
+
+\begin_layout Subsection
+Identification et correction des vulnérabilité
+\end_layout
+
+\begin_layout Section
+Les attaques réseau
+\end_layout
+
+\begin_layout Standard
+les attaques visant ces failles peuvent être à la fois très variées et très
+ dangereuses.
+ C’est pourquoi nous allons dans un premier temps analyser ce que nous appellero
+ns « l’anatomie d’une attaque », puis dans un second temps, nous caractériserons
+ ces attaques et observerons leur déroulement.
+\end_layout
+
+\begin_layout Subsection
+Anatomie d’une attaque
+\end_layout
+
+\begin_layout Standard
+Fréquemment appelés « les 5 P » dans la littérature, ces cinq verbes anglophones
+ constituent le squelette de toute attaque informatique : Probe, Penetrate,
+ Persist, Propagate, Paralyze.
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Probe
+\bar default
+ : consiste en la collecte d’informations par le biais d’outils
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Penetrate
+\bar default
+ : utilisation des informations récoltées pour pénétrer un réseau.
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Persist
+\bar default
+ : création d’un compte avec des droits de super utilisateur pour pouvoir
+ se réinfiltrer ultérieurement.
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Propagate
+\bar default
+ : cette étape consiste à observer ce qui est accessible et disponible sur
+ le réseau local.
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Paralyze
+\bar default
+ : cette étape peut consister en plusieurs actions.
+ Le pirate peut utiliser le serveur pour mener une attaque sur une autre
+ machine, détruire des données ou encore endommager le système d’exploitation
+ dans le but de planter le serveur.
+\end_layout
+
+\begin_layout Standard
+Après ces cinq étapes, le pirate peut éventuellement tenter d’effacer ses
+ traces, bien que cela ne soit rarement utile.
+\end_layout
+
+\begin_layout Subsection
+Les attaques réseaux
+\end_layout
+
+\begin_layout Standard
+Ils se basent principalement sur des failles liées aux protocoles ou à leur
+ implémentation.
+ Observons quelques attaques bien connues.
+\end_layout
+
+\begin_layout Subsubsection
+Les techniques de scan
+\end_layout
+
+\begin_layout Standard
+Le but des scans est de déterminer quels sont les ports ouverts, et donc
+ en déduire les services qui sont exécutés sur la machine cible (ex : port
+ 80/TCP pour un service HTTP).
+ Par conséquent, la plupart des attaques sont précédées par un scan de ports
+ lors de la phase Probe.
+\end_layout
+
+\begin_layout Subsubsection
+Les attaques d’accès
+\end_layout
+
+\begin_layout Standard
+Une attaque d’accès est une tentative d’accès à l’information par une personne
+ non autorisée.
+ Ce type d’attaque concerne la confidentialité de l’information.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Le sniffing
+\end_layout
+
+\begin_layout Standard
+Cette attaque est utilisée par les pirates informatiques pour obtenir des
+ mots de passe.
+ Grâce à un logiciel appelé renifleur de paquets (sniffer), on peut intercepter
+ toutes les paquets qui circulent sur un réseau même ceux qui ne nous sont
+ pas destinés.
+ Cette technologie n’est pas forcement illégale car elle permet aussi de
+ détecter des failles sur un système.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Les chevaux de Troie et Porte dérobée
+\end_layout
+
+\begin_layout Standard
+Les chevaux de Troie sont des programmes informatiques cachés dans d’autres
+ programmes.
+ Leur but est de créer une porte dérobée (backdoor) pour qu’un pirate informatiq
+ue puisse ensuite accéder facilement l’ordinateur ou le réseau informatique.
+ 
+\end_layout
+
+\begin_layout Standard
+Il existe différents types de portes dérobées :
+\end_layout
+
+\begin_layout Itemize
+Création d’un nouveau compte administrateur avec un mot de passe choisi
+ par le pirate.
+\end_layout
+
+\begin_layout Itemize
+Création de compte ftp
+\end_layout
+
+\begin_layout Itemize
+Modification des règles du pare-feu pour qu’il accepte des connections externes.
+\end_layout
+
+\begin_layout Standard
+Dans tous les cas, l’administrateur pert le contrôle total du système informatiq
+ue.
+ Il peut voler des mots de passe, copier des données, exécuter des actions
+ nuisibles.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+L’ingénierie sociale
+\end_layout
+
+\begin_layout Standard
+C’est une méthode pour obtenir des informations sur un système ou des mots
+ de passe.
+ Elle consiste surtout à se faire passer pour quelqu’un que l’on est pas
+ (en général un des administrateurs du serveur que l’on veut pirater) et
+ de demander des informations personnelles (login, mots de passe, accès,
+ numéros, données…) en inventant un quelconque motif (plantage du réseau,
+ modification de celui-ci…).
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Le craquage de mots de passe
+\end_layout
+
+\begin_layout Standard
+Le craquage consiste à faire de nombreux essais jusqu’à trouver le bon mot
+ de passe.
+ Il existe deux grandes méthodes :
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+L’utilisation de dictionnaires :
+\series default
+ le mot testé est pris dans une liste prédéfinie contenant les mots de passe
+ les plus courants.
+ Les dictionnaires actuels contiennent dans les 50 000 mots et sont capables
+ de faire une grande partie des variantes.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+La méthode brute :
+\series default
+ toutes les possibilités sont faites dans l’ordre jusqu’à trouver la bonne
+ solution.
+\end_layout
+
+\begin_layout Subsubsection
+Les attaques par saturation (déni de service)
+\end_layout
+
+\begin_layout Standard
+Les attaques par saturation sont des attaques informatiques qui consiste
+ à envoyer des milliers de messages depuis des dizaines d'ordinateurs, dans
+ le but de submerger les serveurs d'une société, de paralyser pendant plusieurs
+ heures son site Web et d'en bloquer ainsi l'accès aux internautes.
+ Il existe différente attaque par saturation : 
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Le flooding 
+\end_layout
+
+\begin_layout Standard
+Il consiste à envoyer à une machine de nombreux paquets IP de grosse taille.
+ La machine cible ne pourra donc pas traiter tous les paquets et finira
+ par se déconnecter du réseau.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Le smurf 
+\end_layout
+
+\begin_layout Standard
+Il s’appuie sur le ping et les serveurs de broadcast .
+ On falsifie d’abord son adresse IP pour se faire passer pour la machine
+ cible.
+ On envoie alors un ping sur un serveur de broadcast.
+ Il le fera suivre à toutes les machines qui sont connectées qui renverront
+ chacune un << pong >> au serveur qui fera suivre à la machine cible.
+ Celle-ci sera alors inondée sous les paquets et finira par se déconnecter.
+\end_layout
+
+\begin_layout Subsubsection*
+
+\shape italic
+Le débordement de tampon 
+\end_layout
+
+\begin_layout Standard
+Il se base sur une faille du protocole IP.
+ On envoie à la machine cible des données d’une taille supérieure à la capacité
+ d’un paquet.
+ Celui-ci sera alors fractionné pour l’envoi et rassemblé par la machine
+ cible.
+ A ce moment, il y aura débordement des variables internes.
+\end_layout
+
+\begin_layout Subsubsection
+Les attaques de répudiation
+\end_layout
+
+\begin_layout Standard
+La répudiation est une attaque contre la responsabilité.
+ Autrement dit, la répudiation consiste à tenter de donner de fausses informatio
+ns ou de nier qu’un événement ou une transaction se soient réellement passé.
+ Exemples de ces attaques :
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LeARPspoofing
+\series default
+ : consiste à se faire passer pour une autre machine en falsifiant son adresse
+ MAC.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LeIPspoofing
+\series default
+ : consiste à se faire passer pour une autre machine en falsifiant son adresse
+ IP.
+ 
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+La sécurité contre les attaques distantes se renforce, notamment par le
+ biais d’équipements réseaux plus puissants (comme des firewalls plus intelligen
+ts), mais les attaques locales restent toutefois encore fort efficaces :
+ l’ARP Spoofing, le vol de session, … restent souvent possibles.
+\end_layout
+
+\begin_layout Standard
+L’informatique évolue, les applications sont de plus en plus complexes et
+ les délais laissés aux programmeurs et administrateurs sont souvent très
+ (trop) courts.
+ Les risques de failles applicatives sont, de ce fait, très grands et peuvent
+ s’avérer dangereux pour des applications largement répandues.
+ 
+\end_layout
+
+\begin_layout Standard
+Les attaques distribuées seront toujours redoutables si la plupart des machines
+ personnelles ne sont pas protégées.
+ Ce qui nous amène à notre seconde partie : %%%%%%%%% ?
+\end_layout
+
+\begin_layout Subparagraph
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1188 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Section
+Environnement de travail
+\end_layout
+
+\begin_layout Subsection
+Environnement matriél
+\end_layout
+
+\begin_layout Standard
+La plate-forme de travail est une machine de caractéristique suivantes :
+\end_layout
+
+\begin_layout Itemize
+Processeur : Intel core 2 duo 2.00 GHz
+\end_layout
+
+\begin_layout Itemize
+RAM : 2043 Mo
+\end_layout
+
+\begin_layout Subsection
+Environnement logiciel
+\end_layout
+
+\begin_layout Standard
+Systéme d'exploitation :
+\end_layout
+
+\begin_layout Itemize
+Windows vista Edition familial premium
+\end_layout
+
+\begin_layout Itemize
+Windows Xp sp2
+\end_layout
+
+\begin_layout Itemize
+Mandriva Linux 2009 spring
+\end_layout
+
+\begin_layout Itemize
+Linux Backtrack 4 beta
+\end_layout
+
+\begin_layout Standard
+Machine virtuelle :
+\end_layout
+
+\begin_layout Itemize
+VMware Workstation v6.0.3
+\end_layout
+
+\begin_layout Itemize
+Sun VirtualBox v3.1.6
+\end_layout
+
+\begin_layout Standard
+Et LATEX comme environnement de rédaction du rapport.
+\end_layout
+
+\begin_layout Subsection
+Back|Track
+\end_layout
+
+\begin_layout Subsubsection
+L’outil
+\end_layout
+
+\begin_layout Standard
+BackTrack est une distribution GNU/Linux basée sur la distribution 
+\shape italic
+Slackware
+\shape default
+ jusqu'à la version 3 et 
+\shape italic
+Ubuntu
+\shape default
+ depuis la version 4 apparue en 11 Janvier 2010, elle est née de la fusion
+ de 
+\series bold
+Whax
+\series default
+ et 
+\series bold
+Auditor
+\series default
+.
+ Son objectif est de fournir une distribution regroupant l'ensemble des
+ outils nécessaires aux tests de sécurité d'un réseau.
+\end_layout
+
+\begin_layout Standard
+Avec ces 300 outils, BackTrack aborde tous les domaines liés aux sécurités
+ modernes allant de l’audit réseau à l’analyse et l’identification de vulnérabil
+ités en passant par divers outils de récupération d’informations.
+ (
+\series bold
+Fuzzers
+\series default
+ / Testeurs de sécurité des réseaux filaires / Testeur des réseaux 
+\series bold
+wifi
+\series default
+ ...)
+\end_layout
+
+\begin_layout Standard
+BackTrack est principalement connu et utilisé à des fins d’audit de réseaux
+ sans fil wifi.
+ Son développement est axé sur la prise en charge de cartes wifi supportant
+ le mode Monitoring, ce qui permet la capture de paquets, nécessaire pour
+ le crack de clé 
+\series bold
+WEP
+\series default
+/ 
+\series bold
+WPA
+\series default
+ et autres test (suite de logiciel aircrack-ng par exemple)
+\end_layout
+
+\begin_layout Standard
+BackTrack contient aussi des applications basiques comme un lecteur multimédia,
+ traitement de texte ...
+ ce qui en fait un système d’exploitation polyvalent.
+\end_layout
+
+\begin_layout Subsubsection
+Installation
+\end_layout
+
+\begin_layout Standard
+L’un des principaux intérêts de BackTrack est d'être disponible sous forme
+ d'un Livecd, c'est à dire qu’un ordinateur peut booter directement sur
+ le cd sans avoir à se préoccuper d’une quelconque installation avec la
+ possibilité d’exécuter chaque outil immédiatement.
+\end_layout
+
+\begin_layout Standard
+Ainsi, tout se passe dans la mémoire RAM de l’ordinateur n’entrainant aucune
+ intervention sur le disque dur permettant ainsi de l’utiliser sans risque
+ de perte de données ou autre.
+ Ce Livecd permet d’avoir tous les outils indispensables à la sécurité informati
+que sans laisser aucune trace.
+\end_layout
+
+\begin_layout Subsubsection
+Tests qu'on peut réaliser
+\end_layout
+
+\begin_layout Standard
+Comme nous avons pu le dire précédemment, l’objectif de BackTrack est de
+ fournir une distribution compacte regroupant le maximum d’outils nécessaire
+ aux tests de sécurité d’un réseau ou d’application.
+\end_layout
+
+\begin_layout Standard
+Le nombre d’outils liés à la sécurité informatique ne cesse de croître avec
+ les versions de BackTrack.
+\end_layout
+
+\begin_layout Standard
+Dans la version 4.0 beta, nous disposons d’approximativement 300 outils décomposé
+s en 16 catégories.
+ Voici les parties qu’il nous est possible d’utiliser dans de nombreux cas
+ :
+\end_layout
+
+\begin_layout Paragraph
+Analyse de réseau sans fil
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+Aircrack-ng,wesside-ng
+\shape default
+ pour l’analyse et le crackage de Wifi.
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+BTscanner,BlueSnarfer
+\shape default
+ pour l’analyse et le crackage de Bluetooth.
+\end_layout
+
+\begin_layout Paragraph
+Anonymat
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+TOR
+\shape default
+ permet d’être complètement invisible sur le net sans laisser la moindre
+ trace à fin d’éviter de nombreux démêlés judiciaires, il peut être une
+ bonne chose de ne pas laisser de traces sur les différents systèmes comme
+ dans les fichiers de 
+\series bold
+logs
+\series default
+ par exemple.
+\end_layout
+
+\begin_layout Paragraph
+Attaque de mot de passe
+\end_layout
+
+\begin_layout Standard
+BackTrack dispose d’un large panel de possibilité d’attaque contre les mots
+ de passe que ce soit des attaques << en ligne >> ou bien << locale >>.
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+Hydra 
+\shape default
+concernant les attaques en lignes , il est actuellement considéré comme
+ l’un des meilleurs brute forceur en ligne.
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+RaimbowCrack
+\shape default
+ Concernant les attaques hors lignes, il est un casseur de mot de passe
+ basé sur les raimbows tables ce qui le rend excessivement puissant.
+\end_layout
+
+\begin_layout Paragraph
+Collecte d’informations
+\end_layout
+
+\begin_layout Standard
+Il faut toujours prendre très au sérieux cette partie qui est la base de
+ toute attaques de petite ou de grande envergure.
+ Suivant le type d’informations que nous désirons rechercher, nous avons
+ la possibilité de choisir parmi les nombreux outils que nous propose BackTrack.
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+Wapiti
+\shape default
+ nous permettre de récupérer des informations sur les failles Web
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+Nessus
+\shape default
+ nous permettre de visualiser les vulnérabilités d’un système d’exploitation
+ ainsi que ces services
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+Nmap
+\shape default
+ simplement nous renseigner sur les ports ouverts
+\end_layout
+
+\begin_layout Paragraph
+Pénétration
+\end_layout
+
+\begin_layout Standard
+l’étape suivant la récupération d’information est en règle générale la pénétrati
+on de la cible.
+ 
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+Métasploit
+\shape default
+ Il contient une base de données d’environ 300 exploits, capable de simplifier
+ les tests d'intrusion sur des failles importantes.
+\end_layout
+
+\begin_layout Paragraph
+Reverse engineering
+\end_layout
+
+\begin_layout Standard
+C'est l'activité qui consiste à étudier un programme pour en déterminer
+ le fonctionnement interne ou sa méthode de fabrication afin de pouvoir
+ par exemple s’octroyer des accès ou des fonctionnalités ne nous étant pas
+ autorisé initialement.
+\end_layout
+
+\begin_layout Description
+Ollydbg outils très performant en matière de cracking pour débogueur/désassemble
+ur
+\end_layout
+
+\begin_layout Description
+Hexedit comme éditeur hexadécimal
+\end_layout
+
+\begin_layout Paragraph
+Sniffers
+\end_layout
+
+\begin_layout Standard
+les sniffers sont des logiciels qui peuvent récupérer les données transitant
+ par le biais d'un réseau local.
+\end_layout
+
+\begin_layout Itemize
+Dsniff 
+\end_layout
+
+\begin_layout Itemize
+Ettercap-ng(anciennement Ettercap)
+\end_layout
+
+\begin_layout Itemize
+Wireshark(anciennement Ethereal)
+\end_layout
+
+\begin_layout Subsubsection
+Evolutions
+\end_layout
+
+\begin_layout Standard
+BackTrack est à l’heure actuelle la distribution la plus aboutie en matière
+ de sécurité informatique.
+ BackTrack se qualifient tant par le nombre impressionnant d’outils que
+ leur par qualité reconnu par les professionnels.
+ Ces nombreux développeurs et sa large communauté permettent d’avoir une
+ distribution de plus en plus stable avec une compatibilité accrue avec
+ les différents constructeurs de matériels.
+ BackTrack a gagné une grande notoriété et c’est pourquoi, en 2006, BackTrack
+ a été élu comme étant la première distribution de sécurité par 
+\begin_inset CommandInset href
+LatexCommand href
+target "insecure.org"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Les tests réalisés
+\end_layout
+
+\begin_layout Standard
+Aprés la définition de différents outils technique et environnements de
+ tests pour l'achèvement de ce travail nous allons dans ce qui suit présenter
+ les taches et les tests réalisés.
+ 
+\end_layout
+
+\begin_layout Subsection
+Protocole des tests
+\end_layout
+
+\begin_layout Standard
+Nous allons dans cette partie effectuer une série de tests à l’aide de Backtrack.
+ Suite à des contraintes de type matériel, la stratégie adoptée est une
+ stratégie de type interne.
+ Le client et le serveur sont tous deux situés à l’intérieur d’un réseau
+ local 
+\series bold
+Ethernet
+\series default
+.
+ L’objectif est de mieux appréhender ce qui sont les failles de sécurité
+ dans un tel réseau au travers de tests simples.
+\end_layout
+
+\begin_layout Subsubsection
+Test 1 : Sniffer le traffic réseau
+\end_layout
+
+\begin_layout Standard
+À fin de récupérer les mots de passe circulant dans le flux de notre réseau
+ ou' la grande majorité des protocoles font transiter les informations en
+ clair, c'est-à-dire de manière non chiffrée.
+ Ainsi, lorsqu'un utilisateur du réseau consulte un serveur via le protocole
+ FTP ou sFTP, ou accéder sur des sites dont l'adresse commence par HTTP
+ ou HTTPS, toutes les informations envoyées ou reçues peuvent être interceptées.
+\end_layout
+
+\begin_layout Standard
+On va utilisée:
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Wireshark
+\bar default
+ pour récupérer les mot de passe circulant dans les paquets FTP et HTTP
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+Ettercap
+\bar default
+ pour récupérer les mot de passe circulant dans les paquets sFTP et HTTPS
+\end_layout
+
+\begin_layout Subsubsection
+Test 2 : Crackage d'un clé WEP dans un réseau sans fil (Wi-Fi)
+\end_layout
+
+\begin_layout Standard
+En effet, avant de pouvoir réaliser des attaques contres des clés WEP/WPA,
+ il est nécessaire de passer notre carte wifi en mode monitoring pour pouvoir
+ permettre l’injection de paquet.
+\end_layout
+
+\begin_layout Standard
+Il est possible de trouver tous les logiciels nous permettant les attaques
+ contres des réseaux WEP/WPA.
+ Dans notre test on a utilisé la suite aircrack-ng (anciennement aircrack)
+ ,déja installée sur BackTrack , composé de :
+\end_layout
+
+\begin_layout Itemize
+airodump-ng (capture de paquets)
+\end_layout
+
+\begin_layout Itemize
+aireplay-ng (injection de paquet)
+\end_layout
+
+\begin_layout Itemize
+aircrack-ng (crack de clé)
+\end_layout
+
+\begin_layout Subsubsection
+Test 3 :
+\end_layout
+
+\begin_layout Subsection
+Déploiement
+\end_layout
+
+\begin_layout Subsubsection
+Topologie
+\end_layout
+
+\begin_layout Standard
+Nous avons créé 3 machines virtuelles sur VMware, pour qu’elles puissent
+ communiquer directement sur le réseau physique.
+ Pour ce là, nous avons utilisés le mode 
+\series bold
+Host-Only
+\series default
+ qui permet de connecter les cartes réseau (virtuelles) des VM directement
+ à la carte physique.
+\end_layout
+
+\begin_layout Standard
+Cette connexion permet entre autres d’activer le service 
+\series bold
+DHCP-Server
+\series default
+, afin de délivrer des adresses IP aux machines virtuelle du réseau 
+\series bold
+Host-Only
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Du point de vue de la 
+\series bold
+VM
+\series default
+, c’est comme si elle été directement connectée au réseau physique.
+ Techniquement, un 
+\series bold
+vSwitch
+\series default
+ est crée, et est connecté à la carte réseau physique, via l’interface associée.
+ Ceci explique pourquoi il est possible d’utiliser des sniffeurs de paquets
+ directement sur l’interface dans le but d’écouter le trafic réseau des
+ machines virtuelles.
+\end_layout
+
+\begin_layout Standard
+%%%%%%%
+\end_layout
+
+\begin_layout Standard
+Différents systèmes ont été installés sur ces machines virtuelles.
+ Les configurations de ces derniers ont été indiquées dans le tableau suivant
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Les configurations des virtuelles machines
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="5">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+V.M.
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+VM-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+VM-2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+VM-3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Adresse IP
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+192.168.56.102
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+192.168.56.104
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+192.168.56.101
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Type de carte
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+PCnet-FAST III 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+PCnet-FAST III 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+PCnet-FAST III 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Carte réseau
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+(Am79C793)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+(Am79C793)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+(Am79C793)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Adresse MAC
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+08 00 27 1F 04 70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+08 00 27 1C 73 44
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+08 00 27 2B 50 FD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Mémoire vive
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+512 Mo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+256 Mo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+256 Mo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+OS
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Linux Backtrack 4 beta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Linux Mandriva 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Windows XP-sp2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Paramétrage
+\end_layout
+
+\begin_layout Paragraph
+Test 1 : Sniffer le traffic réseau
+\end_layout
+
+\begin_layout Subparagraph
+Test 1-A : En utilisant Wireshark
+\end_layout
+
+\begin_layout Itemize
+le sniffeur est installer dans VM-1 à fin de capturer le traffic entreVM-2
+ et VM-1 .
+\end_layout
+
+\begin_layout Itemize
+le serveur FTP (ou Web) est installer dans le VM-2.
+\end_layout
+
+\begin_layout Itemize
+le client FTP (ou Web) est le VM-3 
+\end_layout
+
+\begin_layout Subparagraph
+Test 1-B : En utilisant Ettercap
+\end_layout
+
+\begin_layout Itemize
+le sniffeur est installer dans VM-1 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+sa configuratuion par la commande : << vim /etc/etter.conf >>
+\end_layout
+
+\begin_layout Itemize
+le lancement se sniffer se fait par : << ettercap -TqM ARP:REMOTE /192.168.56.101/
+ / 192.168.56.104/ >>
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+le serveur Web sécurisée (ou FTP sécurisée) est installer dans le VM-2.
+ 
+\end_layout
+
+\begin_layout Itemize
+le client Web sécurisée (ou FTP sécurisée) est le VM-3.
+\end_layout
+
+\begin_layout Paragraph
+Test 2 : Crackage d'un clé WEP dans un réseau sans fil (Wi-Fi)
+\end_layout
+
+\begin_layout Standard
+Le test est mené sur le poste VM-1.
+ Les postes VM-2 et VM-3 partagent un meme réseau sans-fil sécurisé à l'aide
+ d'un mot de passe.
+ Aircrack-ng , installé sur VM-1, crackera ce mot de passe dés que l'un
+ de ces machines se connectera sur ce réseau à fin de rejoindre ce réseau.
+\end_layout
+
+\begin_layout Paragraph
+Test 3 :
+\end_layout
+
+\begin_layout Subsection
+Exploitation
+\end_layout
+
+\begin_layout Subsubsection
+Résultats
+\end_layout
+
+\begin_layout Paragraph
+Test 1 :Sniffer le traffic entre 2 machine 
+\end_layout
+
+\begin_layout Subparagraph
+Test 1-A : En utilisant Wireshark
+\end_layout
+
+\begin_layout Standard
+Dans l'interface de Wireshark on obtient tous les trame qui cerculent dans
+ le réseau, ils sont classifier par le protocol de transfert, chaque protocol
+ a son propre couleur.
+ Exemple : DHCP(Bleu ciel), FTP(gris claire), HTTP(vert) ...
+\end_layout
+
+\begin_layout Standard
+Il ne reste que chercher les trames FTP(ou HTTP) et les regroupper pour
+ trouver notre mot de passe et login du client spécifié dans VM-3 on ecrit
+ dans le formulaire << filter>> :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+protocole && ip.src & @source 
+\end_layout
+
+\begin_layout Plain Layout
+
+Dans notre exemple est:
+\end_layout
+
+\begin_layout Plain Layout
+
+                          ftp && ip.src & 192.168.56.101  
+\end_layout
+
+\begin_layout Plain Layout
+
+   
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Test 1-B : En utilisant Ettercap
+\end_layout
+
+\begin_layout Standard
+Comme résultat, Ettercap nous donne que les logins(USER) et leurs mot de
+ passe(PASS).
+ Exemple des résultats obtenues :
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+   FTP:192.168.56.104:21 -> USER:oussema PASS:root
+\end_layout
+
+\begin_layout Plain Layout
+
+ HTTP:192.168.56.104:443 ->USER:oussema PASS:root INFO: https://192.168.56.104/oussema
+/index.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il distingue automatiquement les mots de passe et les logins 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Paragraph
+Test 2 : Crackage d'un clé WEP dans un réseau sans fil (Wi-Fi)
+\end_layout
+
+\begin_layout Standard
+Comme résultat on a obtenue le mot de passe décrypté << Decrypted correctly
+ : 100% >> mais sous forme hexadécimale c'est à dire sous cette forme :
+ 
+\series bold
+xx : xx : xx : xx : xx
+\series default
+ ...
+ Donc on aura besoin à un logiciel pour le convertir en code 
+\series bold
+ASCII .
+ 
+\series default
+On cite un programme dans 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://converter.Hex-To- ASCII Converter.com"
+target "http://converter.Hex-To- ASCII Converter.com"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Test 3 :
+\end_layout
+
+\begin_layout Subsubsection
+Analyse de l’audit
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\end_body
+\end_document

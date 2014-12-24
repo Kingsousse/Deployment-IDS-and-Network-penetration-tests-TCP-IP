@@ -1,0 +1,290 @@
+\setcounter{chapter}{2}
+\chapter{Tests d'Intrusion}
+    \graphicspath{{Chapitre3/figures/}}
+
+%==================================================================================================%
+
+
+
+
+\section{Introduction}
+
+Les tests d\textquoteright{}intrusion\cite{ICCA} constituent une tentative autorisée
+de simuler les activités d\textquoteright{}un pirate qui veut s\textquoteright{}approprier
+des ressources qui ne sont pas les siennes, ou nuire au bon fonctionnement
+d\textquoteright{}un système d\textquoteright{}informations, par exemple
+en le rendant indisponible.
+
+Ces tests permettent d\textquoteright{}avoir une image claire de la
+sécurité globale d\textquoteright{}une entreprise ou d\textquoteright{}un
+accès Internet chez un particulier. Ils correspondent à des attaques
+simulées d\textquoteright{}un réseau. Ils permettent de tester la
+robustesse de la sécurité, d\textquoteright{}apprécier l\textquoteright{}efficacité
+des mécanismes mis en oeuvre. Il est ainsi possible de savoir si les
+mécanismes mis en place permettent de stopper ou non un attaquant
+malintentionné.
+
+Les tests d\textquoteright{}intrusion ne peuvent pas se réduire à
+la simple utilisation d\textquoteright{}un logiciel de détection automatique
+de vulnérabilités par balayage. En particulier
+ils nécessitent l\textquoteright{}intervention d\textquoteright{}une
+équipe de professionnels compétents qui eux vont identifier et qualifier
+les failles de manière plus réfléchie et auront à l\textquoteright{}esprit
+les conséquences des tests qu\textquoteright{}ils effectueront. Néanmoins,
+les scanners de vulnérabilité présentent un certain intérêt dans leur
+caractère automatique mais ils ne suffisent pas à eux seuls à obtenir
+une bonne détermination des failles de vulnérabilité que présente
+un réseau.
+\section{Définition}
+
+\subsection{Stratégies des tests}
+
+Il existe plusieurs stratégies de tests :
+\begin{maliste}
+\item Les \underbar{tests externes} qui correspondent à un examen des services disponibles
+via Internet.
+\item Les \underbar{tests internes} qui exploitent les failles de vulnérabilités qui
+pourraient être disponibles à un attaquant en provenance d\textquoteright{}Internet
+ayant réussi à s\textquoteright{}introduire dans le réseau ou à un
+employé malveillant.
+\end{maliste}
+Les méthodes et les techniques utilisés dans les tests internes ou
+externes sont identiques. La seule différence notable est l\textquoteright{}étendue
+des connaissances relatives au réseau, en possession des attaquants.
+\\
+
+Pour simuler ce degré de connaissance du système, les tests d\textquoteright{}intrusion
+peuvent se faire de plusieurs façons :
+\begin{lyxlist}{00.00.0000}
+\item [{\textbf{\textit{Test en aveugle :}}}]  les équipes en charge du test ont un accès limité
+aux renseignements relatifs à la configuration du système d\textquoteright{}information
+\item [{\textbf{\textit{Test en double aveugle :}}}] seule la personne qui est à l\textquoteright{}initiative
+du test est au courant, la personne en charge de la sécurité ne l\textquoteright{}est
+pas.
+\item [{\textbf{\textit{Test ciblé :}}}] l\textquoteright{}équipe de sécurité est au courant et
+a des connaissances sur le réseau et sur la cible visée.
+\end{lyxlist}
+
+\subsection{Types des tests}
+
+Il existe différents types de tests parmi lesquels nous pouvons noter
+ceux relatifs :
+
+\begin{maliste}
+
+	\item  la sécurité des applications Web
+	 \item  Les dénis de service (DoS)
+	  \item le scannage de numéros de téléphone (War dialing)
+			\item Au réseau sans fil
+				\item l\textquoteright{}ingénierie sociale
+\end{maliste}
+
+
+
+
+\subsection{Leurs limites}
+
+Un test d\textquoteright{}intrusion peut échouer mais ça ne signifie
+pas que le système ne présente pas de faille de vulnérabilité.
+
+Il est impossible de tester toutes les failles de
+vulnérabilité présentes dans un réseau.Par exemple, Les scanners de vulnérabilité ne simulent pas toutes les nouvelles failles.
+
+De plus, il est nécessaire de répéter de façon régulière ces tests.
+Tout ajout de matériel, l\textquoteright{}apparition de nouveaux outils
+de piratage ou de nouvelles technologies remettent en cause les résultats
+des tests d\textquoteright{}intrusion.
+
+
+\subsection{La démarche utilisée dans les tests d\textquoteright{}intrusion}
+
+\begin{figure}[!ht]
+  \centering
+\includegraphics[scale=0.9]{diag1.png}
+\caption{\label{intru1}La démarche utilisée dans les tests d'intrusion.}
+\end{figure}
+
+Nous nous intéressons ici à la description de la démarche employée
+dans les tests d\textquoteright{}intrusion :
+
+
+\subsubsection*{A. La phase préparatoire}
+\begin{enumerate}
+\item collection d\textquoteright{}informations publiques (DNS, WhoIs, \ldots{})
+\item cartographie réseau de la cible ( ping, traceroute, nmap )
+\item identification de vulnérabilité (Nessus)
+\item consolidation de données obtenues
+\end{enumerate}
+
+\subsubsection*{B. La phase de réalisation}
+\begin{enumerate}
+\item conception des scénarii d\textquoteright{}attaques à évaluer
+\item exécution des scénarii
+\item consolidation des données obtenues
+\end{enumerate}
+Dans le cas des \textbf{hackers}, l\textquoteright{}intrusion s\textquoteright{}arrête
+ici. Ils nettoient généralement les traces laissées par leur passage.
+\\
+
+Dans le cas d\textquoteright{}un audit de sécurité, il faut alors
+fermer les brèches ouvertes, puis passer à l\textquoteright{}étape
+suivante.
+
+
+\subsubsection*{C. La phase de restitution}
+\begin{enumerate}
+\item synthèse des données obtenues lors des phases préparatoires puis de
+réalisation
+\item définition d\textquoteright{}un plan d\textquoteright{}actions correctrices
+\item présentation des résultats au commanditaire du test
+\end{enumerate}
+Nous illustrerons dans la suite cette démarche en indiquant les différents
+outils utilisés agrémentés d\textquoteright{}exemples.
+
+
+\section{L\textquoteright{}audit de vulnérabilité}
+
+Nous parlons ici de l\textquoteright{}audit\cite{5} en tant qu\textquoteright{}étape
+de la phase préparatoire de la démarche utilisée dans les tests d\textquoteright{}intrusion.
+Dans le but d\textquoteright{}identifier les failles de vulnérabilité, elle consiste à récupérer des informations relatives aux réseaux et aux systèmes présents sur ces derniers. Les failles de vulnérabilité résultent
+en général de limites jointes à la conception des technologies
+ou découlent de mauvaises configurations ou utilisations. Les tests
+d\textquoteright{}intrusions donnent des indications sur la facilité
+ou à l\textquoteright{}inverse la difficulté d\textquoteright{}accéder
+à l\textquoteright{}information et au système d\textquoteright{}informations
+en exploitant les vulnérabilités de sécurité. Les scanners de vulnérabilité
+correspondent à une façon automatisée de mise en évidence de ces failles.
+Ils indiquent la façon dont il est possible d\textquoteright{}exploiter
+ces vulnérabilités et les méthodes permettant de résoudre les problèmes.
+Ils couvrent, en général, un large éventail de vulnérabilités connues.
+Tandis que les tests d\textquoteright{}intrusion ciblent certaines
+vulnérabilités.
+
+
+\section{Outils liés aux tests d\textquoteright{}intrusion}
+
+Nous allons reprendre dans cette partie les différentes étapes de
+la démarche utilisée dans les tests d\textquoteright{}intrusion que
+nous avons présentées précédemment, dans lesquelles sont utilisés
+des outils spécifiques. Nous donnerons également des exemples afin
+de mieux illustrer la démarche.
+
+\begin{figure}[!ht]
+  \centering
+\includegraphics[scale=0.9]{diag2.png}
+\caption{\label{intru2}Exemples d'outils utilisés lors d'une intrusion.}
+\end{figure}
+
+
+\subsection{Divers outils}
+
+
+\subsubsection{Etape de collecte d\textquoteright{}informations publiques (A.1.)}
+
+La commande \textbf{Whois} permet d\textquoteright{}obtenir des informations
+publiques correspondant au réseau cible : nom du serveur \textbf{DNS},
+nom du responsable, numéro de téléphone, adresse e-mail, description
+du réseau etc.
+
+
+\subsubsection{Etape de cartographie du réseau cible (A.2.)}
+
+Les outils utilisés dans cette étape permettent de récolter des informations
+relatives à la topologie du réseau afin de déterminer sa structuration.
+Parmi ces outils, nous pouvons trouver :
+\begin{description}
+\item [{\textbf{\textsl{Nmap}}}] qui est un scanner de réseau. Il permet
+de savoir quels sont les ports ouverts, fermés ou filtrés , ainsi
+que le système d\textquoteright{}exploitation autorisé et sa version.
+Il permet par exemple de scanner un ensemble d\textquoteright{}\textbf{adresses
+IP} en précisant la méthode de scan utilisée, les types de ports tels
+que les ports \textbf{UDP}, en tentant d\textquoteright{}identifier
+la machine cible et en sauvegardant le résultat dans un fichier.
+\item [{\textbf{\textsl{Siphon}}}] permet de découvrir la topologie de
+la portion de réseau sur laquelle se trouve la machine où nous le
+lançons. Il indique les systèmes d\textquoteright{}exploitation présents
+sur les machines, les ports ouverts, les machines qui ont le droit
+de se connecter au réseau. Il est ainsi possible de savoir pour quelle
+machine nous devons nous faire passer, afin de contourner les Firewalls.
+\item [{\textbf{\textsl{Dsniff}}}] permet de visualiser les paquets présents
+sur le réseau et ainsi de récupérer des clefs en sniffant (\textbf{sniffer}).
+\item [{\textbf{\textsl{Finger}}}] permet d\textquoteright{}obtenir des
+comptes valides. En général, le \textbf{démon} correspondant est désactivé.
+\end{description}
+
+
+\subsubsection{Etape d\textquoteright{}identification des vulnérabilités (A.3.)}
+
+Nous voulons identifier les failles
+potentielles présentes sur le réseau en utilisant des scanners de
+vulnérabilité tels que \textbf{Nessus}. L\textquoteright{}utilisation
+de ces logiciels n\textquoteright{}est pas très discrète. En effet,
+étant donné que ces logiciels testent des failles bien connues des
+\textbf{NIDS}, ils sont facilement repérables. Les \textbf{NIDS} sont
+des systèmes de détection d'intrusion basés au niveau d\textquoteright{}un
+réseau. 
+
+Une fois un certain nombre de vulnérabilités est identifiées, il est alors
+nécessaire d\textquoteright{}éliminer les failles non fondées. 
+
+
+\subsubsection{Etape d\textquoteright{}exécution des scénarii (B.2.)}
+
+Dans cette étape,nous pouvons distinguer deux ensembles de produits utilisés  ceux qui permettent de s\textquoteright{}introduire sur un
+ordinateur ou un serveur et ceux qui permettent de se procurer des
+privilèges auxquels nous n\textquoteright{}avons normalement pas accès.
+
+
+
+\subsection{Outils d\textquoteright{}audit}
+
+Il ya de nombreux logiciels qui permettent d\textquoteright{}automatiser
+la découverte de vulnérabilités, ils sont appelés des scanners. Ils
+permettent d\textquoteright{}évaluer les vulnérabilités présentes
+sur les réseaux. Ils se déclinent sous plusieurs formes et donnent
+des résultats avec des précisions variables.
+\\
+
+Parmi ces logiciels, nous pouvons citer:
+\subsubsection{Internet Scanner}
+
+  Il peut s\textquoteright{}intégrer au
+produit \textbf{ISS} Décisions pour être utilisé avec d\textquoteright{}autres
+produits de sécurité tels que les systèmes de détection d\textquoteright{}intrusions
+et les \textbf{firewall} (pare-feu).
+
+
+\subsubsection{SATAN, SAINT, SARA}
+
+ SATAN avait la particularité d\textquoteright{}être
+\textbf{open source}. Il n\textquoteright{}est plus mis à jour depuis
+plusieurs années. Mais, il existe une myriade d\textquoteright{}outils
+similaires tel que l\textquoteright{}outil \textbf{open source SARA
+}qui est la troisième génération d\textquoteright{}outil d\textquoteright{}analyse
+basé sur \textbf{SATAN}, ou la solution commerciale \textbf{SAINT}.
+
+
+\subsubsection{Retina}
+
+Nous pouvons également citer le logiciel \textbf{Retina}, qui est rapidement devenu populaire. Il analyse le trafic sur
+chaque port afin de déterminer le service utilisé. Il existe une fonction
+nommée \textbf{CHAM} permettant de découvrir de nouvelles failles
+de vulnérabilité. Cette méthode repose sur un moteur d\textquoteright{}intelligence
+artificiel. \textbf{Retina} est une solution commerciale.
+
+
+\subsubsection{Nessus, NeWT}
+
+Enfin, il existe une autre offre dont nous allons parler de façon
+plus approfondie dans ce document, l\textquoteright{}outil Nessus,
+et sa version Windows appelée \textbf{NeWT}. \textbf{Nessus} est un
+outil \textbf{open source}. Un français, renaud Deraison, est l\textquoteright{}auteur
+et l\textquoteright{}animateur de se projet. La version Windows est
+disponible sur le site de la société Tenable Network Security en version
+d\textquoteright{}évaluation. Nessus semble être l\textquoteright{}un
+des outils les plus populaires du moment.
+
+
+
+\section{conclusion}
+Les tests d'intrusion avec ses différents types constituent une tentative autorisée de simuler les activités pour approprier des ressources. Pour cette affaire il existait une démarche bien précise qui s'est achevée à l'aide des outils d'audit.

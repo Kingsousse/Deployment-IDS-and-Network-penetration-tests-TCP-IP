@@ -1,0 +1,75 @@
+\BOOKMARK [0][]{section*.1}{Table des figures}{}
+\BOOKMARK [0][]{section*.2}{Liste des tableaux}{}
+\BOOKMARK [0][]{section*.3}{Introduction générale}{}
+\BOOKMARK [0][]{chapter.1}{I Introduction à la sécurité informatique}{}
+\BOOKMARK [1][]{section.1.1}{1 Définition}{chapter.1}
+\BOOKMARK [1][]{section.1.2}{2 Objectifs généraux de la sécurité informatique}{chapter.1}
+\BOOKMARK [1][]{section.1.3}{3 Vulnérabilité}{chapter.1}
+\BOOKMARK [2][]{subsection.1.3.1}{3.1 Définition }{section.1.3}
+\BOOKMARK [2][]{subsection.1.3.2}{3.2 Causes}{section.1.3}
+\BOOKMARK [2][]{subsection.1.3.3}{3.3 Identification et correction des vulnérabilités}{section.1.3}
+\BOOKMARK [1][]{section.1.4}{4 Les types d'attaques}{chapter.1}
+\BOOKMARK [2][]{subsection.1.4.1}{4.1 Anatomie d\220une attaque}{section.1.4}
+\BOOKMARK [2][]{subsection.1.4.2}{4.2 Les attaques réseaux}{section.1.4}
+\BOOKMARK [3][]{subsubsection.1.4.2.1}{4.2.1 Les techniques de scan}{subsection.1.4.2}
+\BOOKMARK [3][]{subsubsection.1.4.2.2}{4.2.2 Les attaques d\220accès}{subsection.1.4.2}
+\BOOKMARK [3][]{subsubsection.1.4.2.3}{4.2.3 Les attaques par saturation \(déni de service\)}{subsection.1.4.2}
+\BOOKMARK [3][]{subsubsection.1.4.2.4}{4.2.4 Les attaques de répudiation}{subsection.1.4.2}
+\BOOKMARK [1][]{section.1.5}{5 Conclusion}{chapter.1}
+\BOOKMARK [0][]{chapter.2}{II Analyse du réseau}{}
+\BOOKMARK [1][]{section.2.1}{1 Introduction}{chapter.2}
+\BOOKMARK [1][]{section.2.2}{2 Définition}{chapter.2}
+\BOOKMARK [2][]{subsection.2.2.1}{2.1 Utilisation du sniffer}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.2}{2.2 Technique de fonctionnement}{section.2.2}
+\BOOKMARK [1][]{section.2.3}{3 Outils d'analyse réseau}{chapter.2}
+\BOOKMARK [2][]{subsection.2.3.1}{3.1 Wireshark}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.2}{3.2 Tcpdump}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.3}{3.3 Ettercap }{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.4}{3.4 Dsniff}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.5}{3.5 SoftPerfect Analyser}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.6}{3.6 Kismet}{section.2.3}
+\BOOKMARK [1][]{section.2.4}{4 Synthèse comparative}{chapter.2}
+\BOOKMARK [2][]{subsection.2.4.1}{4.1 Tableau comparatif des outils}{section.2.4}
+\BOOKMARK [2][]{subsection.2.4.2}{4.2 Constatation }{section.2.4}
+\BOOKMARK [1][]{section.2.5}{5 conclusion}{chapter.2}
+\BOOKMARK [0][]{chapter.3}{III Tests d'Intrusion}{}
+\BOOKMARK [1][]{section.3.1}{1 Introduction}{chapter.3}
+\BOOKMARK [1][]{section.3.2}{2 Définition}{chapter.3}
+\BOOKMARK [2][]{subsection.3.2.1}{2.1 Stratégies des tests}{section.3.2}
+\BOOKMARK [2][]{subsection.3.2.2}{2.2 Types des tests}{section.3.2}
+\BOOKMARK [2][]{subsection.3.2.3}{2.3 Leurs limites}{section.3.2}
+\BOOKMARK [2][]{subsection.3.2.4}{2.4 La démarche utilisée dans les tests d\220intrusion}{section.3.2}
+\BOOKMARK [1][]{section.3.3}{3 L\220audit de vulnérabilité}{chapter.3}
+\BOOKMARK [1][]{section.3.4}{4 Outils liés aux tests d\220intrusion}{chapter.3}
+\BOOKMARK [2][]{subsection.3.4.1}{4.1 Divers outils}{section.3.4}
+\BOOKMARK [3][]{subsubsection.3.4.1.1}{4.1.1 Etape de collecte d\220informations publiques \(A.1.\)}{subsection.3.4.1}
+\BOOKMARK [3][]{subsubsection.3.4.1.2}{4.1.2 Etape de cartographie du réseau cible \(A.2.\)}{subsection.3.4.1}
+\BOOKMARK [3][]{subsubsection.3.4.1.3}{4.1.3 Etape d\220identification des vulnérabilités \(A.3.\)}{subsection.3.4.1}
+\BOOKMARK [3][]{subsubsection.3.4.1.4}{4.1.4 Etape d\220exécution des scénarii \(B.2.\)}{subsection.3.4.1}
+\BOOKMARK [2][]{subsection.3.4.2}{4.2 Outils d\220audit}{section.3.4}
+\BOOKMARK [3][]{subsubsection.3.4.2.1}{4.2.1 Internet Scanner}{subsection.3.4.2}
+\BOOKMARK [3][]{subsubsection.3.4.2.2}{4.2.2 SATAN, SAINT, SARA}{subsection.3.4.2}
+\BOOKMARK [3][]{subsubsection.3.4.2.3}{4.2.3 Retina}{subsection.3.4.2}
+\BOOKMARK [3][]{subsubsection.3.4.2.4}{4.2.4 Nessus, NeWT}{subsection.3.4.2}
+\BOOKMARK [1][]{section.3.5}{5 conclusion}{chapter.3}
+\BOOKMARK [0][]{chapter.4}{IV Réalisation}{}
+\BOOKMARK [1][]{section.4.1}{1 Introduction}{chapter.4}
+\BOOKMARK [1][]{section.4.2}{2 Environnement de travail}{chapter.4}
+\BOOKMARK [2][]{subsection.4.2.1}{2.1 Environnement matriél}{section.4.2}
+\BOOKMARK [2][]{subsection.4.2.2}{2.2 Environnement logiciel}{section.4.2}
+\BOOKMARK [2][]{subsection.4.2.3}{2.3 Back|Track}{section.4.2}
+\BOOKMARK [3][]{subsubsection.4.2.3.1}{2.3.1 L\220outil}{subsection.4.2.3}
+\BOOKMARK [3][]{subsubsection.4.2.3.2}{2.3.2 Installation}{subsection.4.2.3}
+\BOOKMARK [3][]{subsubsection.4.2.3.3}{2.3.3 Tests qu'on peut réaliser}{subsection.4.2.3}
+\BOOKMARK [3][]{subsubsection.4.2.3.4}{2.3.4 Evolutions}{subsection.4.2.3}
+\BOOKMARK [1][]{section.4.3}{3 Les tests réalisés}{chapter.4}
+\BOOKMARK [2][]{subsection.4.3.1}{3.1 Topologie}{section.4.3}
+\BOOKMARK [2][]{subsection.4.3.2}{3.2 Les tests réalisés}{section.4.3}
+\BOOKMARK [3][]{subsubsection.4.3.2.1}{3.2.1 Test 1 : Scan de vunérabilité }{subsection.4.3.2}
+\BOOKMARK [3][]{subsubsection.4.3.2.2}{3.2.2 Test 2 : Sniffer le traffic réseau}{subsection.4.3.2}
+\BOOKMARK [3][]{subsubsection.4.3.2.3}{3.2.3 Test 3 : Crackage d\220un clé WEP dans un réseau sans fil \(Wi-Fi\)}{subsection.4.3.2}
+\BOOKMARK [1][]{section.4.4}{4 Conclusion}{chapter.4}
+\BOOKMARK [0][]{chapter*.58}{Conclusion g\351n\351rale et perspectives}{}
+\BOOKMARK [0][]{chapter*.59}{Annexe A : Glossaire}{}
+\BOOKMARK [0][]{section*.60}{Références bibliographiques}{}
+\BOOKMARK [0][]{section*.61}{Références Internet}{}

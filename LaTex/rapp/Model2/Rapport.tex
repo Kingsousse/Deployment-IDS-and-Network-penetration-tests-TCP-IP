@@ -1,0 +1,207 @@
+\documentclass[oneside,12pt]{Classes/aesm_edspia}
+%\usepackage[latin1]{inputenc}
+\usepackage[english,french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{lmodern}%font modern
+\rmfamily
+\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub * cmr/bx/sc}{} %manque une police en lmodern
+\usepackage{lettrine}
+\usepackage{tabularx}
+\usepackage{epsfig, floatflt, amssymb} 
+\usepackage{wrapfig}%figure entouré de texte.
+\usepackage{moreverb} %% pour le verbatim en boite
+\usepackage{cases}%equations en systemes numérotés - soluce possible package : CASES
+%\usepackage{slashbox} %% pour couper les colonnes des tableaux en diagonale 
+%\usepackage{layout}
+%\usepackage{showkeys} %% pour voir les labels
+\usepackage{multirow} %% pour regrouper un texte sur plusieurs lignes dans une table
+\usepackage{url} %% pour citer les url par \url
+\usepackage[all]{xy} %% pour la barre au dessus des symboles
+%\usepackage{shorttoc} %% pour plusieurs tables des matières par la commande \shorttableofcontents{Titre}{profondeur}.
+\usepackage{textcomp} %% pour le symbol pour mille par \textperthousand et degrés par \degres
+\usepackage[right]{eurosym}
+\usepackage{setspace} %interligne simple, double etc...
+\usepackage{eurosans} %%pour le symbole \euro
+\usepackage{epic,eepic}
+\usepackage{soul}
+%\usepackage{lineno}%numéroter les lignes 
+\usepackage[nottoc]{tocbibind} % tables des figures, des matieres et autres dans la TOC
+%\usepackage{palatino}
+\usepackage{fancybox}
+\usepackage[leftcaption]{sidecap}
+%\usepackage[labelsep=endash, textfont={normalsize,onehalfspacing}, margin=5pt, format=hang, labelfont=bf]{caption}
+\usepackage[labelsep=endash, textfont={footnotesize, singlespacing}, margin=10pt, format=plain, labelfont=bf]{caption}
+\usepackage[Conny]{fncychap} %en tete chapitrage
+\newcommand{\ie}{c.-\`a-d.~}
+\hbadness=10000% pb d'overfull box réglé
+\hfuzz=50pt
+\pdfcompresslevel9 % pour compresser le pdf final au maximum
+\pdfoptionpdfminorversion=5 % pour accepté les images PDF version 1.5 (ex: celles produites par Office 2007)
+\def\underscore{\char`\_}
+\makeatletter
+\renewcommand{\thesection}{\arabic {section}}
+\renewcommand{\SC@figure@vpos}{c}% centrer verticalement le caption avec le package sidecap...
+\renewcommand{\fnum@figure}{\small\textbf{Figure~\thefigure}}
+\renewcommand{\fnum@table}{\small\textbf{Tableau~\thetable}}
+%\newcommand\figcaption{\def\@captype{figure}\caption}
+%\newcommand\tabcaption{\def\@captype{table}\caption}
+\makeatother
+\usepackage{subfig}
+\def\thechapter{\Roman{chapter}}
+%\usepackage{chapterbib}
+
+%%%%%%%%%%%%%%%%changement par moi
+%\usepackage{xcolor}
+%\usepackage{colorlinks=true,urlcolor=black}{hyperref}
+\usepackage{multibib}
+\usepackage{rotating}
+\providecommand{\tabularnewline}{\\}
+\usepackage{graphicx}
+%\begin{maliste}
+%\item
+%\end{maliste}
+\newenvironment{maliste}%
+{ \begin{list}%
+{$\bullet$}%
+{\setlength{\labelwidth}{30pt}%
+\setlength{\leftmargin}{45pt}%
+\setlength{\itemsep}{\parsep}}}%
+{ \end{list} }
+
+%%
+%%%%%%%%%%%%%%%
+\newenvironment{lyxlist}[1]
+{\begin{list}{}
+{\settowidth{\labelwidth}{#1}
+ \setlength{\leftmargin}{\labelwidth}
+ \addtolength{\leftmargin}{\labelsep}
+ \renewcommand{\makelabel}[1]{##1\hfil}}}
+{\end{list}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\figurename{\small\textbf{Figure}} 
+
+\addtocounter{page}{-1}%pour revenir à 0
+
+%%  1ere de Couverture:
+%\RapporteurA{M. xx xxxxx}{Professeur d'Université}{Rapporteur}
+%\RapporteurB{M. xx xxxxx}{Directeur de Recherche au CNRS}{Rapporteur}
+%\ExaminateurA{M. xx xxxxx}{Directeur de Recherche au CNRS}{Examinateur}
+%\President{M. xx xxxxx}{Professeur d'Université}{Examinateur}         
+%\ExaminateurB{M. xx xxxxx}{Chargé de Recherche au CNRS}{Examinateur}
+
+
+%\makethese %% crée la couverture.
+
+\onehalfspacing
+%\renewcommand\baselinestretch{1.2}
+%\baselineskip=18pt plus 1pt
+
+% une page blanche (deuxième de couverture)
+
+%\newpage\thispagestyle{empty}\addtocounter{page}{-1}
+%\null\newpage\thispagestyle{empty}
+
+%\newpage\thispagestyle{empty}
+%~\newpage\thispagestyle{empty}
+
+%profondeur dans la table des matières et de la numérotation des sections
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\frontmatter
+%\pagestyle{fancy}
+%\fancyhf{}
+\include{Remerciement/remerciement}
+%\fancyhead[R]{Remerciements}
+%\fancyhead[RO]{\bfseries\rightmark}
+%\fancyhead[LE]{\bfseries\leftmark}
+%\fancyfoot[R]{\thepage}
+%\fancyfoot[LE]{\thepage}
+%\renewcommand{\headrulewidth}{0.5pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername~\thechapter. #1 }}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thechapter.\thesection~ #1}}
+
+%\printnomenclaturey
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Table des matières}
+%\fancyhead[RO]{\bfseries\rightmark}
+%\fancyhead[LE]{\bfseries\leftmark}
+\fancyfoot[R]{\thepage}
+%\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername~\thechapter. #1 }}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thechapter.\thesection~ #1}}
+\tableofcontents
+%%%%%%%%%%%%%%
+\listoffigures
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Table des figures}
+%\fancyhead[RO]{\bfseries\rightmark}
+%\fancyhead[LE]{\bfseries\leftmark}
+\fancyfoot[R]{\thepage}
+%\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername~\thechapter. #1 }}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thechapter.\thesection~ #1}}
+%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\listoftables
+%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Convention}
+%\fancyhead[RO]{\bfseries\rightmark}
+%\fancyhead[LE]{\bfseries\leftmark}
+\fancyfoot[R]{\thepage}
+%\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername~\thechapter. #1 }}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thechapter.\thesection~ #1}}
+%%%%%%%%%%%%%
+\include{convention}                                      
+\mainmatter
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Introduction générale}
+%\fancyhead[RO]{\bfseries\rightmark}
+%\fancyhead[LE]{\bfseries\leftmark}
+\fancyfoot[R]{\thepage}
+%\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername~\thechapter. #1 }}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thechapter.\thesection~ #1}}
+\include{Introduction/introduction}
+\include{Chapitre1/chapitre1}
+\include{Chapitre2/chapitre2}
+\include{Chapitre3/chapitre3}
+\include{Chapitre4/chapitre4}
+\backmatter
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{Conclusion générale et perspectives}{}}
+\fancyhead[R]{Conclusion générale et perspectives}
+\fancyfoot[R]{\thepage}
+%\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\include{Conclusion/conclusion}
+\appendix
+\include{Annexe1/annexe1}
+%\include{Annexe2/annexe2}
+\include{bibliograf}
+\include{netograf}
+
+\end{document}

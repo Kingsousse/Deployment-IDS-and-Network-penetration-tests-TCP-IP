@@ -1,0 +1,287 @@
+\chapter{Introduction à la sécurité informatique}
+\graphicspath{{Chapitre1/figures/}}
+%==============================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\bfseries\leftmark}
+%\fancyhead[LE]{}
+\fancyfoot[R]{\thepage}
+%\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername~\thechapter. #1 }}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thechapter.\thesection~ #1}}
+%==============================================================================
+\section{Définition}
+
+
+
+
+La sécurité informatique est l'ensemble des moyens mis en \oe uvre
+pour minimiser la vulnérabilité d'un système contre des menaces accidentelles
+ou inaccidentelles. Connaître les dangers auxquels il convient de parer, et connaître
+les moyens de se prémunir contre eux. La sécurité exige de se montrer
+systématique, mais elle implique aussi un effort de coordination,
+de technologie, d'information, de discussion, de comparaison et de
+contrôle. 
+
+
+\section{Objectifs généraux de la sécurité informatique}
+
+La sécurité informatique\cite{1}, d'une manière générale, consiste à assurer
+que les ressources matérielles ou logicielles d'une organisation sont
+uniquement utilisées dans le cadre prévu. 
+\\
+
+La sécurité informatique vise généralement cinq principaux objectifs :
+
+
+
+\subsection*{L'intégrité}
+
+la vérification de l'intégrité des données consiste à déterminer si les données
+n'ont pas été modifiées durant la communication (de manière fortuite
+ou intentionnelle). 
+
+\subsection*{La confidentialité}
+
+La confidentialité consiste à rendre l'information inintelligible(indéchiffrable)
+à d'autres personnes que les seuls acteurs de la transaction. 
+
+
+\subsection*{La disponibilité}
+
+Son objectif est de garantir l'accès à un service
+ou à des ressources. 
+
+
+\subsection*{La non-répudiation}
+
+La non-répudiation de l'information est la garantie qu'aucun des correspondants
+ne pourra nier la transaction.
+
+
+\subsection*{L'authentification}
+
+L'authentification consiste à assurer l'identité d'un utilisateur,
+c'est-à-dire de garantir à chacun des correspondants que son partenaire
+est bien celui qu'il croit être. Un contrôle d'accès peut permettre
+(par exemple par le moyen d'un mot de passe qui devra être crypté)
+l'accès à des ressources uniquement aux personnes autorisées. 
+
+
+
+\section{Vulnérabilité}
+
+
+\subsection{Définition }
+Dans le domaine de la sécurité informatique\cite{2}, une vulnérabilité est une faiblesse dans un système informatique permettant à un attaquant de porter atteinte à l'intégrité de ce système, c'est-à-dire à son fonctionnement normal, à la confidentialité et l'intégrité des données qu'il contient. On parle aussi de faille de sécurité informatique.
+
+
+\subsection{Causes}
+
+La cause des vulnérabilités informatiques est souvent la négligence ou l'inexpérimentation d'un programmeur. Une vulnérabilité permet généralement à l'attaquant de tromper l'application, par exemple en dépassant les vérifications de contrôle d'accès ou en exécutant des commandes sur le système hébergeant l'application.
+
+Exemples de vulnérabilités
+\begin{maliste}
+\item Dépassement de tampon
+\item Injection \textbf{SQL}
+\item Cross site scripting
+\end{maliste}
+
+Quelques vulnérabilités surviennent lorsque l'entrée d'un utilisateur n'est pas contrôlée, permettant l'exécution de commandes ou de requêtes \textbf{SQL} (connues sous le nom d'injection \textbf{SQL}). D'autres proviennent d'erreurs d'un programmeur lors de la vérification des buffers de données (qui peuvent alors être dépassés), causant ainsi une corruption de la pile mémoire (et ainsi permettre l'exécution de code fourni par l'attaquant).
+
+\subsection{Identification et correction des vulnérabilités}
+
+Il existe de nombreux outils qui peuvent faciliter la découverte de vulnérabilités sur un système information, certains permettant leur suppression. Mais, bien que ces outils puissent fournir à un auditeur une bonne vision d'ensemble des vulnérabilités potentiellement présentes, ils ne peuvent pas remplacer le jugement humain. Se reposer uniquement sur des scanners automatiques de vulnérabilité rapportera de nombreux faux positifs et une vue limitée des problèmes présents dans le système.
+
+Exemples de ces outils
+\begin{description}
+\item [{Nessus, OpenVAS}] scanners de vulnérabilités
+\item [{Wapiti, Nikto}] analyseurs de Site Web
+\item [{Absynthe, SQLNinja, SQLInject}] analyseurs de Base de données 
+\end{description}
+
+
+
+\section{Les types d'attaques}
+
+les attaques\cite{Cederic}, qui visent ces failles, (voir fig \ref{chap1}) peuvent être à la fois très variées
+et très dangereuses. C\textquoteright{}est pourquoi nous allons dans
+tout d\textquoteright{}abord analyser ce que nous appellerons  << l\textquoteright{}anatomie
+d\textquoteright{}une attaque >> , ensuite, nous caractériserons
+ces attaques et observerons leur déroulement.
+
+\begin{figure}[!ht]
+  \centering
+\includegraphics[scale=1]{shem1.png}
+\caption{\label{chap1}Typologie des faiblesses de sécurité.}
+\end{figure}
+
+
+
+\subsection{Anatomie d\textquoteright{}une attaque}
+
+Fréquemment appelés << les 5 P >> dans la littérature, ces cinq verbes
+anglophones constituent le squelette de toute attaque informatique
+: Probe, Penetrate, Persist, Propagate, Paralyze.
+\begin{maliste}
+
+\item \underbar{Probe} (approfondir): consiste en la collecte d\textquoteright{}informations
+par le biais d\textquoteright{}outils
+\item \underbar{Penetrate}(pénétrer) : utilisation des informations récoltées pour
+pénétrer un réseau.
+\item \underbar{Persist}(persister) : création d\textquoteright{}un compte avec des
+droits de super utilisateur pour pouvoir se réinfiltrer ultérieurement.
+\item \underbar{Propagate}(propager) : cette étape consiste à observer ce qui est
+accessible et disponible sur le réseau local.
+\item \underbar{Paralyze}(paralyser) : cette étape peut consister en plusieurs actions.
+Le pirate peut utiliser le serveur pour mener une attaque sur une
+autre machine, détruire des données ou encore endommager le système
+d\textquoteright{}exploitation dans le but de planter le serveur.
+\end{maliste}
+Après ces cinq étapes, le pirate peut éventuellement tenter d\textquoteright{}effacer
+ses traces, bien que cela ne soit rarement utile.
+
+
+\subsection{Les attaques réseaux}
+
+Ils se basent principalement sur des failles liées aux protocoles
+ou à leur implémentation. Observons quelques attaques bien connues.
+
+
+\subsubsection{Les techniques de scan}
+
+Le but des scans est de déterminer quels sont les ports ouverts, et
+donc en déduire les services qui sont exécutés sur la machine cible
+(ex : port 80/TCP pour un service HTTP). Par conséquent, la plupart
+des attaques sont précédées par un scan de ports lors de la phase
+Probe.
+
+
+\subsubsection{Les attaques d\textquoteright{}accès}
+
+Une attaque d\textquoteright{}accès est une tentative d\textquoteright{}accès
+à l\textquoteright{}information par une personne non autorisée. Ce
+type d\textquoteright{}attaque concerne la confidentialité de l\textquoteright{}information.
+
+
+\subsubsection*{\textit{Le sniffing}}
+
+Cette attaque est utilisée par les pirates informatiques pour obtenir
+des mots de passe. Grâce à un logiciel appelé renifleur de paquets
+(sniffer), on peut intercepter toutes les paquets qui circulent sur
+un réseau même ceux qui ne nous sont pas destinés. Cette technologie
+n\textquoteright{}est pas forcement illégale car elle permet aussi
+de détecter des failles sur un système.
+
+
+\subsubsection*{\textit{Les chevaux de Troie et Porte dérobée}}
+
+Les chevaux de Troie sont des programmes informatiques cachés dans
+d\textquoteright{}autres programmes. Leur but est de créer une porte
+dérobée (backdoor) pour qu\textquoteright{}un pirate informatique
+puisse ensuite accéder facilement l\textquoteright{}ordinateur ou
+le réseau informatique. 
+
+Il existe différents types de portes dérobées :
+\begin{maliste}
+
+\item Création d\textquoteright{}un nouveau compte administrateur avec un
+mot de passe choisi par le pirate.
+\item Création de compte ftp
+\item Modification des règles du pare-feu pour qu\textquoteright{}il accepte
+des connections externes.
+\end{maliste}
+Dans tous les cas, l\textquoteright{}administrateur pert le contrôle
+total du système informatique. Il peut voler des mots de passe, copier
+des données, exécuter des actions nuisibles.
+
+
+\subsubsection*{\textit{L\textquoteright{}ingénierie sociale}}
+
+C\textquoteright{}est une méthode pour obtenir des informations sur
+un système ou des mots de passe. Elle consiste surtout à se faire
+passer pour quelqu\textquoteright{}un que l\textquoteright{}on est
+pas (en général un des administrateurs du serveur que l\textquoteright{}on
+veut pirater) et de demander des informations personnelles (login,
+mots de passe, accès, numéros, données\ldots{}) en inventant un quelconque
+motif (plantage du réseau, modification de celui-ci\ldots{}). 
+
+
+\subsubsection*{\textit{Le craquage de mots de passe}}
+
+Le craquage consiste à faire de nombreux essais jusqu\textquoteright{}à
+trouver le bon mot de passe. Il existe deux grandes méthodes :
+\begin{maliste}
+
+\item \textbf{L\textquoteright{}utilisation de dictionnaires :} le mot testé
+est pris dans une liste prédéfinie contenant les mots de passe les
+plus courants. Les dictionnaires actuels contiennent dans les 50 000
+mots et sont capables de faire une grande partie des variantes.
+\item \textbf{La méthode brute :} toutes les possibilités sont faites dans
+l\textquoteright{}ordre jusqu\textquoteright{}à trouver la bonne solution.
+\end{maliste}
+
+\subsubsection{Les attaques par saturation (déni de service)}
+
+Les attaques par saturation sont des attaques informatiques qui consiste
+à envoyer des milliers de messages depuis des dizaines d'ordinateurs,
+dans le but de submerger les serveurs d'une société, de paralyser
+pendant plusieurs heures son site Web et d'en bloquer ainsi l'accès
+aux internautes. Il existe différente attaque par saturation : 
+
+
+\subsubsection*{\textit{Le flooding }}
+
+Il consiste à envoyer à une machine de nombreux paquets IP de grosse
+taille. La machine cible ne pourra donc pas traiter tous les paquets
+et finira par se déconnecter du réseau.
+
+
+\subsubsection*{\textit{Le smurf }}
+
+Il s\textquoteright{}appuie sur le ping et les serveurs de broadcast
+. On falsifie d\textquoteright{}abord son adresse IP pour se faire
+passer pour la machine cible. On envoie alors un ping sur un serveur
+de broadcast. Il le fera suivre à toutes les machines qui sont connectées
+qui renverront chacune un << pong >>
+au serveur qui fera suivre à la machine cible. Celle-ci sera alors
+inondée sous les paquets et finira par se déconnecter.
+
+
+\subsubsection*{\textit{Le débordement de tampon }}
+
+Il se base sur une faille du protocole IP. On envoie à la machine
+cible des données d\textquoteright{}une taille supérieure à la capacité
+d\textquoteright{}un paquet. Celui-ci sera alors fractionné pour l\textquoteright{}envoi
+et rassemblé par la machine cible. A ce moment, il y aura débordement
+des variables internes.
+
+
+\subsubsection{Les attaques de répudiation}
+
+La répudiation est une attaque contre la responsabilité. Autrement
+dit, la répudiation consiste à tenter de donner de fausses informations
+ou de nier qu\textquoteright{}un événement ou une transaction se soient
+réellement passé. Exemples de ces attaques :
+\begin{maliste}
+
+\item \textbf{LeARPspoofing} : consiste à se faire passer pour une autre
+machine en falsifiant son adresse MAC. 
+\item \textbf{LeIPspoofing} : consiste à se faire passer pour une autre
+machine en falsifiant son adresse IP. 
+\end{maliste}
+
+
+
+
+\section{Conclusion}
+
+De plus en plus la sécurité contre les attaques distantes se renforce, notamment par
+le biais d\textquoteright{}équipements réseaux plus puissants (comme
+des firewalls plus intelligents), mais les attaques locales restent
+encore fort efficaces.
+ 
+
+
